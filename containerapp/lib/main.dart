@@ -40,11 +40,17 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
+                   width: 80,
+                  height: 80,
+                  color: Colors.green,
                 ),
                 Container(
+                   width: 80,
+                  height: 80,
+                  color: Colors.blue,
+                ),
+              ],  
             )
-          ]
-          )
           ]
         ),
       ),
