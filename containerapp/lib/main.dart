@@ -28,8 +28,15 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Center(
        
-        child: Column(          
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Row(          
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Container(
+              width: 80,
+              height: 400,
+              color: Colors.red,
+            ),
+          ]
         ),
       ),
     );
