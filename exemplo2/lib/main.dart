@@ -46,16 +46,19 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
             Container(
+              child: const Text('Texto'),
               width: 100,
               height: 100,
               color: Colors.blue,
             ),
             Container(
+              child: const Text('Texto'),
               width: 100,
               height: 100,
               color: Colors.green,
             ),
             Container(
+              child: const Text('Texto'),
               width: 100,
               height: 100,
               color: Colors.red,
@@ -65,16 +68,19 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
             Container(
+              child: const Text('Texto'),
               width: 100,
               height: 100,
               color: Colors.yellow,
             ),
             Container(
+              child: const Text('Texto'),
               width: 100,
               height: 100,
               color: Colors.purple,
             ),
             Container(
+              child: const Text('Texto'),
               width: 100,
               height: 100,
               color: Colors.pink,
