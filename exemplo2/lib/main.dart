@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 
-                const Text("Hello World!"),
+                const Text("Hello World!", style: TextStyle(fontSize: 25),),
                 const Image(image: AssetImage("assets/images/chorrin.jpg")),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -58,10 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
         ),
-        
       ),
-     
-      
     );
   }
 }
