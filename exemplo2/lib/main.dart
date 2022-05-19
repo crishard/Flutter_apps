@@ -24,7 +24,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -34,7 +33,6 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                
                 const Text("Hello World!", style: TextStyle(fontSize: 25),),
                 const Image(image: AssetImage("assets/images/chorrin.jpg")),
                 Row(
@@ -45,7 +43,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     Botao(),
                     Botao(),
                 ],),
-
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
