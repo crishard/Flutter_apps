@@ -42,33 +42,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                   
-                Container(
-                  color: Colors.blue,
-                  padding: const EdgeInsets.all(10),
-                  margin: const EdgeInsets.all(10),
-                  child: const Text("Botão", style: TextStyle(
-                  fontSize: 20,  
-                  color: Colors.white,) 
-                      ),
-                ),
-                Container(
-                  color: Colors.blue,
-                  padding: const EdgeInsets.all(10),
-                  margin: const EdgeInsets.all(10),
-                  child: const Text("Botão", style: TextStyle(
-                  fontSize: 20,  
-                  color: Colors.white,) 
-                      ),
-                ),
-                Container(
-                  color: Colors.blue,
-                  padding: const EdgeInsets.all(10),
-                  margin: const EdgeInsets.all(10),
-                  child: const Text("Botão", style: TextStyle(
-                  fontSize: 20,  
-                  color: Colors.white,) 
-                      ),
-                ),
+                Botao(),
+                Botao(),
+                Botao(),
                 ],),
 
                 Row(
@@ -123,7 +99,7 @@ class Botao extends StatelessWidget {
     return Container(
                   color: Colors.blue,
                   padding: const EdgeInsets.all(10),
-                  margin: const EdgeInsets.all(20),
+                  margin: const EdgeInsets.all(10),
                   child: const Text("Botão", style: TextStyle(
                   fontSize: 20,  
                   color: Colors.white,) 
