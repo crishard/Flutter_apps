@@ -115,21 +115,19 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-// class Botao extends StatelessWidget {
-//   const Botao({Key? key}) : super(key: key);
+class Botao extends StatelessWidget {
+  const Botao({Key? key}) : super(key: key);
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Container(
-//                   color: Colors.blue,
-//                   padding: const EdgeInsets.all(10),
-//                   margin: const EdgeInsets.all(20),
-//                   child: const Text("Botão", style: TextStyle(
-//                   fontSize: 20,  
-//                   color: Colors.white,) 
-//                       ),
-//                 ),
-//   );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+                  color: Colors.blue,
+                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(20),
+                  child: const Text("Botão", style: TextStyle(
+                  fontSize: 20,  
+                  color: Colors.white,) 
+                      ),
+    );
+  }
+}
