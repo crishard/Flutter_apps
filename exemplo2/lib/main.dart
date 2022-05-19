@@ -7,17 +7,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    return const MaterialApp(
+      home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -29,66 +26,110 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Text(
-              'Hello World!',
-              style: Theme.of(context).textTheme.headline4,
+      body: SafeArea(
+        child: Container(
+          margin: const EdgeInsets.all(20),
+          child: 
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                
+                const Text("Hello World!"),
+                const Image(image: AssetImage("assets/images/chorrin.jpg")),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                  
+                Container(
+                  color: Colors.blue,
+                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
+                  child: const Text("Botão", style: TextStyle(
+                  fontSize: 20,  
+                  color: Colors.white,) 
+                      ),
+                ),
+                Container(
+                  color: Colors.blue,
+                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
+                  child: const Text("Botão", style: TextStyle(
+                  fontSize: 20,  
+                  color: Colors.white,) 
+                      ),
+                ),
+                Container(
+                  color: Colors.blue,
+                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
+                  child: const Text("Botão", style: TextStyle(
+                  fontSize: 20,  
+                  color: Colors.white,) 
+                      ),
+                ),
+                ],),
+
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+
+                Container(
+                  color: Colors.blue,
+                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
+                  child: const Text("Botão", style: TextStyle(
+                  fontSize: 20,  
+                  color: Colors.white,) 
+                      ),
+                ),
+                Container(
+                  color: Colors.blue,
+                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
+                  child: const Text("Botão", style: TextStyle(
+                  fontSize: 20,  
+                  color: Colors.white,) 
+                      ),
+                ),
+                Container(
+                  color: Colors.blue,
+                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
+                  child: const Text("Botão", style: TextStyle(
+                  fontSize: 20,  
+                  color: Colors.white,) 
+                      ),
+                ),
+                  ],
+                )
+              ],
             ),
-          Container(
-            width: 300,
-            height: 200,
-            color: Colors.amber,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-            Container(
-              child: const Text('Texto'),
-              width: 100,
-              height: 100,
-              color: Colors.blue,
-            ),
-            Container(
-              child: const Text('Texto'),
-              width: 100,
-              height: 100,
-              color: Colors.green,
-            ),
-            Container(
-              child: const Text('Texto'),
-              width: 100,
-              height: 100,
-              color: Colors.red,
-            ),
-          ],),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-            Container(
-              child: const Text('Texto'),
-              width: 100,
-              height: 100,
-              color: Colors.yellow,
-            ),
-            Container(
-              child: const Text('Texto'),
-              width: 100,
-              height: 100,
-              color: Colors.purple,
-            ),
-            Container(
-              child: const Text('Texto'),
-              width: 100,
-              height: 100,
-              color: Colors.pink,
-            ),
-          ],)
-          ]
         ),
+        
       ),
+     
+      
     );
   }
 }
+// class Botao extends StatelessWidget {
+//   const Botao({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Container(
+//                   color: Colors.blue,
+//                   padding: const EdgeInsets.all(10),
+//                   margin: const EdgeInsets.all(20),
+//                   child: const Text("Botão", style: TextStyle(
+//                   fontSize: 20,  
+//                   color: Colors.white,) 
+//                       ),
+//                 ),
+//   );
+//   }
+// }
