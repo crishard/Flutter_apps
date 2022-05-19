@@ -40,21 +40,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                  
-                Botao(),
-                Botao(),
-                Botao(),
+                  children: const [
+                    Botao(),
+                    Botao(),
+                    Botao(),
                 ],),
 
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-
-                  Botao(),
-                  Botao(),
-                  Botao(),
+                  children: const [
+                    Botao(),
+                    Botao(),
+                    Botao(),
                   ],
                 )
               ],
