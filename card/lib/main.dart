@@ -23,7 +23,8 @@ class _MyCardState extends State<MyCard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      backgroundColor: Colors.teal,
+      body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
         ),
@@ -37,8 +38,11 @@ class Contato extends StatelessWidget{
   final String text;
   @override
   Widget build(BuildContext context) {
-    return Container(
-
+    return Column(
+        children: [
+          Icon(icon, size: 50, color: Colors.blue),
+          Text(text, style: TextStyle(fontSize: 20),)
+        ],
     );
   }
 }
