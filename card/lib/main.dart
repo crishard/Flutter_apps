@@ -44,25 +44,32 @@ class _MyCardState extends State<MyCard> {
               ),
             ),
             ),
+
             Container(
-              margin: const EdgeInsets.only(bottom: 10.0),
               child: const Text(
               'FLUTTER DEVELOPER',
               style: TextStyle(
-                fontFamily: 'Source Sans Pro',
-                fontSize: 18.0,
+                fontFamily: 'Roboto',
+                fontSize: 16.0,
                 color: Colors.tealAccent,
                 letterSpacing: 2.5,
-                decoration: TextDecoration.underline,
               ),
             ),
             ),
+
+            Container(
+              margin: const EdgeInsets.symmetric(horizontal: 40),
+                  child: Divider(color: Colors.teal.shade900,),
+            ),
             
-            Contato(
+            const Contato(
             icon: Icons.call,
             text: '+55 (11) 99999-9999',
             ),
-            Contato(icon: Icons.email, text: 'crislan@gmail.com')
+            const Contato(
+              icon: Icons.email, 
+              text: 'crislan@gmail.com'
+            )
           ],
         ),
       ),
@@ -83,13 +90,10 @@ class Contato extends StatelessWidget{
       ),
       child: Row(
         children: [
-          Icon( icon, size: 30, color: Colors.teal),
-          Text( text, style: const TextStyle(fontSize: 20),)
+        Icon(icon, color: Colors.teal,),
+        Text(text, style: const TextStyle(fontSize: 20, color: Color.fromARGB(255, 13, 105, 96),))        
         ]
-
       )
-      
-       
     );
   }
 }
