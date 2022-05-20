@@ -31,12 +31,14 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
 
-            children:const [
-              CircleAvatar(
-                radius: 60,
+            children: [
+              const CircleAvatar(
+                radius: 0,
                 backgroundImage: AssetImage('assets/images/perfil.jpeg'),
               ),
-              Text('Hello World'),
+              Container(
+                child: const Text('Hello World'),
+              )
             ],
           ),
           )
