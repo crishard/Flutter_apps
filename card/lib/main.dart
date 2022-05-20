@@ -51,7 +51,11 @@ class _MyCardState extends State<MyCard> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-          Contato(),
+            Contato(
+            icon: Icons.call,
+            text: '+55 (11) 99999-9999',
+            ),
+            Contato(icon: Icons.email, text: 'crislan@gmail.com')
           ],
         ),
       ),
@@ -59,20 +63,21 @@ class _MyCardState extends State<MyCard> {
   }
 }
 class Contato extends StatelessWidget{
-  const Contato({Key? key}) : super(key: key);
+  const Contato({Key? key, required this.icon, required this.text}) : super(key: key);
+  final IconData icon;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10.0),
-      margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-
+      margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25.0),
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), 
       color: Colors.white,
       ),
       child: Row(
-        children: const [
-          Icon( Icons.smartphone, size: 30, color: Colors.teal),
-          Text('9 9999-9999', style: TextStyle(fontSize: 20),)
+        children: [
+          Icon( icon, size: 30, color: Colors.teal),
+          Text( text, style: const TextStyle(fontSize: 20),)
         ]
 
       )
