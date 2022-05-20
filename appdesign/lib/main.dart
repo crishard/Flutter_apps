@@ -26,7 +26,21 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: SafeArea(
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+
+            children:const [
+              CircleAvatar(
+                radius: 60,
+                backgroundImage: AssetImage('assets/images/perfil.jpeg'),
+              ),
+              Text('Hello World'),
+            ],
+          ),
+          )
+
       ),
     );
   }
