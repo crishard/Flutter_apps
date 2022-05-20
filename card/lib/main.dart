@@ -27,12 +27,14 @@ class _MyCardState extends State<MyCard> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            CircleAvatar(
+          children: [
+            const CircleAvatar(
               radius: 60.0,
               backgroundImage: AssetImage('assets/images/perfil.jpeg'),
             ),
-            Text(
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 10.0),
+              child: const Text(
               'Crislân Torres',
               style: TextStyle(
                 fontFamily: 'Roboto',
@@ -41,16 +43,21 @@ class _MyCardState extends State<MyCard> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text(
+            ),
+            Container(
+              margin: const EdgeInsets.only(bottom: 10.0),
+              child: const Text(
               'FLUTTER DEVELOPER',
               style: TextStyle(
                 fontFamily: 'Source Sans Pro',
                 fontSize: 18.0,
                 color: Colors.tealAccent,
                 letterSpacing: 2.5,
-                fontWeight: FontWeight.bold,
+                decoration: TextDecoration.underline,
               ),
             ),
+            ),
+            
             Contato(
             icon: Icons.call,
             text: '+55 (11) 99999-9999',
