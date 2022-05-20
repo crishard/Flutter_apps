@@ -24,13 +24,32 @@ class _MyCardState extends State<MyCard> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.teal,
-      body: SafeArea(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
             CircleAvatar(
-              radius: 50.0,
-              backgroundImage: AssetImage('assets/images/perfil.jpg'),
+              radius: 60.0,
+              backgroundImage: AssetImage('assets/images/perfil.jpeg'),
+            ),
+            Text(
+              'Crislân Torres',
+              style: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 30.0,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              'FLUTTER DEVELOPER',
+              style: TextStyle(
+                fontFamily: 'Source Sans Pro',
+                fontSize: 18.0,
+                color: Colors.tealAccent,
+                letterSpacing: 2.5,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
