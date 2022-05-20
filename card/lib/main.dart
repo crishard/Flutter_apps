@@ -30,7 +30,7 @@ class _MyCardState extends State<MyCard> {
           children: const [
             CircleAvatar(
               radius: 50.0,
-              backgroundImage: AssetImage('images/profile.jpg'),
+              backgroundImage: AssetImage('assets/images/perfil.jpg'),
             ),
           ],
         ),
