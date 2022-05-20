@@ -27,6 +27,12 @@ class _MyCardState extends State<MyCard> {
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            CircleAvatar(
+              radius: 50.0,
+              backgroundImage: AssetImage('images/profile.jpg'),
+            ),
+          ],
         ),
       ),
     );
