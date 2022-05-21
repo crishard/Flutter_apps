@@ -8,18 +8,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: MyHomePage(),
+      home: HomePageApp(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class HomePageApp extends StatefulWidget {
+  const HomePageApp({Key? key}) : super(key: key);
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<HomePageApp> createState() => _HomePageAppState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomePageAppState extends State<HomePageApp> {
 
   @override
   Widget build(BuildContext context) {
