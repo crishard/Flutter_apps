@@ -15,8 +15,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
-
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -30,7 +28,6 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-
             children: [
               const CircleAvatar(
                 radius: 0,
@@ -42,7 +39,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
           )
-
       ),
     );
   }
