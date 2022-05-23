@@ -23,10 +23,10 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                Padding(padding: const EdgeInsets.only(top: 20, bottom: 55),
                
                child: Row(
-                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                 crossAxisAlignment: CrossAxisAlignment.center,
-                 children: [
-                   CircleAvatar(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const CircleAvatar(
                      radius: 40,
                      backgroundImage: AssetImage('assets/images/perfil.jpeg'),
                    ),
@@ -46,12 +46,16 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                        const Text(
                         "Parabéns! Esse mês você fez",
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 16,
                           color: Colors.white,
                         ),
                       ),
                       Container(
-                        child: Icon(Icons.remove_red_eye_rounded, color: Colors.white, size: 30),
+                        child: Icon(
+                          Icons.remove_red_eye_rounded, 
+                          color: Colors.white, 
+                          size: 30
+                          ),
                       ),
                       // IconButton(
                       //   icon: Icons.remove_red_eye_outlined,
