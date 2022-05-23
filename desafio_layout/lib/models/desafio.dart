@@ -13,10 +13,11 @@ class _DesafioLayoutState extends State<DesafioLayout> {
     return Scaffold(
       backgroundColor: Colors.teal,
 
-      body: Row(children: [
+      body: Row(
+        children: const [
         CircleAvatar(
           radius: 50,
-          backgroundImage: AssetImage('assets/images/perfil.jpg'),
+          backgroundImage: AssetImage('assets/images/perfil.jpeg'),
         )
       ],)
       
