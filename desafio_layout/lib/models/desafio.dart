@@ -17,10 +17,10 @@ class _DesafioLayoutState extends State<DesafioLayout> {
        children: [
          SingleChildScrollView(
            child: Padding(
-             padding: const EdgeInsets.all(35),
+             padding: const EdgeInsets.only(top: 35, left: 35, right: 35),
             child: Column(
              children: [
-               Padding(padding: const EdgeInsets.only(top: 20, bottom: 45),
+               Padding(padding: const EdgeInsets.only(top: 20, bottom: 55),
                
                child: Row(
                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -42,13 +42,16 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                ),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                       Text(
+                    children:  [
+                       const Text(
                         "Parabéns! Esse mês você fez",
                         style: TextStyle(
                           fontSize: 18,
                           color: Colors.white,
                         ),
+                      ),
+                      Container(
+                        child: Icon(Icons.remove_red_eye_rounded, color: Colors.white, size: 30),
                       ),
                       // IconButton(
                       //   icon: Icons.remove_red_eye_outlined,
