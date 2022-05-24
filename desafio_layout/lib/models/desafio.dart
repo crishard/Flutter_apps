@@ -1,3 +1,4 @@
+import 'package:desafio_layout/models/components/notificacoes_card.dart';
 import 'package:flutter/material.dart';
 
 class DesafioLayout extends StatefulWidget {
@@ -57,6 +58,7 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                           size: 30
                           ),
                       ),
+                      
                       // IconButton(
                       //   icon: Icons.remove_red_eye_outlined,
                       //   iconSize: 35,
@@ -75,10 +77,15 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                       // )
                     ],
                   ),
+                  NotificacoesCard(),
              ],
+             
            ),
+           
            ),
+           
          )
+         
        ],
       ),
       
