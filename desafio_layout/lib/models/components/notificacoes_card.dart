@@ -12,7 +12,7 @@ class NotificacoesCard extends StatelessWidget{
 
     return Container(
       height: 100,
-      margin: const EdgeInsets.only(top: 20,),
+      margin: const EdgeInsets.only(top: 15,),
       decoration: BoxDecoration(
         color: Color.fromARGB(255, 131, 99, 218),
         borderRadius: BorderRadius.circular(20), 
@@ -23,7 +23,7 @@ class NotificacoesCard extends StatelessWidget{
             spreadRadius: 7, 
             offset: Offset(2, 3))]
       ),
-
+      
     );
   }
 }
