@@ -1,3 +1,4 @@
+import 'package:desafio_layout/models/components/ganhos_card.dart';
 import 'package:desafio_layout/models/components/notificacoes_card.dart';
 import 'package:flutter/material.dart';
 
@@ -78,6 +79,7 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                     ],
                   ),
                   NotificacoesCard(),
+                  GanhosCard(),
              ],
              
            ),

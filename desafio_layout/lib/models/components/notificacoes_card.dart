@@ -20,7 +20,7 @@ class NotificacoesCard extends StatelessWidget{
           BoxShadow(
             color: Color.fromARGB(255, 131, 99, 218), 
             blurRadius: 3, 
-            spreadRadius: 7, 
+            spreadRadius: 5, 
             offset: Offset(2, 3))]
       ),
       
