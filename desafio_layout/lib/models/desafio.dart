@@ -1,5 +1,5 @@
-import 'package:desafio_layout/models/components/ganhos_card.dart';
-import 'package:desafio_layout/models/components/notificacoes_card.dart';
+import 'package:desafio_layout/models/components/cards/notificacoes.dart';
+import 'package:desafio_layout/models/components/cards/ganhos.dart';
 import 'package:flutter/material.dart';
 
 class DesafioLayout extends StatefulWidget {
