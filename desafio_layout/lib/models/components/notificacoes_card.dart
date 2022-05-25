@@ -16,7 +16,7 @@ class NotificacoesCard extends StatelessWidget{
       decoration: BoxDecoration(
         color: Color.fromARGB(255, 131, 99, 218),
         borderRadius: BorderRadius.circular(20), 
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Color.fromARGB(255, 131, 99, 218), 
             blurRadius: 3, 
