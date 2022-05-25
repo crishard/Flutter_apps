@@ -23,8 +23,7 @@ class _DesafioLayoutState extends State<DesafioLayout> {
             child: Column(
              children: [
                Padding(padding: const EdgeInsets.only(top: 20, bottom: 55),
-               
-               child: Row(
+                child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -62,15 +61,11 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                   NotificacoesCard(),
                   GanhosCard(),
              ],
-            ),
-           
+            ),   
           ),
-           
          )
-         
        ],
       ),
-      
     );
   }
 }
