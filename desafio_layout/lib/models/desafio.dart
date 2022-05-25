@@ -45,7 +45,7 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
-                       const Text(
+                      Text(
                         "Parabéns! Esse mês você fez",
                         style: TextStyle(
                           fontSize: 16,
