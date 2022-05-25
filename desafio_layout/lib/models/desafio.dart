@@ -44,7 +44,7 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                ),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children:  [
+                    children: const [
                        const Text(
                         "Parabéns! Esse mês você fez",
                         style: TextStyle(
@@ -52,39 +52,19 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                           color: Colors.white,
                         ),
                       ),
-                      Container(
-                        child: Icon(
-                          Icons.remove_red_eye_rounded, 
-                          color: Colors.white, 
-                          size: 30
-                          ),
+                      Icon(
+                        Icons.remove_red_eye_rounded, 
+                        color: Colors.white, 
+                        size: 30,
                       ),
-                      
-                      // IconButton(
-                      //   icon: Icons.remove_red_eye_outlined,
-                      //   iconSize: 35,
-                      //   color: Colors.white,
-                      //   onPressed: () {
-                      //     setState(() => {
-                      //       if (!buttonClick) {
-                      //         _myIcon = Icon(Icons.visibility_off),
-                      //         buttonClick = true
-                      //       } else {
-                      //         _myIcon = Icon(Icons.visibility),
-                      //         buttonClick = false
-                      //       }
-                      //     });
-                      //   },
-                      // )
                     ],
                   ),
                   NotificacoesCard(),
                   GanhosCard(),
              ],
-             
-           ),
+            ),
            
-           ),
+          ),
            
          )
          
