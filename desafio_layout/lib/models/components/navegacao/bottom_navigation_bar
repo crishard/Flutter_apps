@@ -33,15 +33,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       style: optionStyle,
     ),
     Text(
-      'Index 1: Business',
+      'Index 1: Loja',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'Index 2: Pessoas',
       style: optionStyle,
     ),
     Text(
-      'Index 3: Settings',
+      'Index 3: Informações',
       style: optionStyle,
     ),
   ];
@@ -69,18 +69,18 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.shop_two),
+            label: 'Loja',
             backgroundColor: Colors.green,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.people_alt),
+            label: 'Pessoas',
             backgroundColor: Colors.purple,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+            icon: Icon(Icons.escalator),
+            label: 'Informações',
             backgroundColor: Colors.pink,
           ),
         ],
