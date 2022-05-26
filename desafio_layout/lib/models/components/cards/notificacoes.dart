@@ -23,7 +23,6 @@ class NotificacoesCard extends StatelessWidget{
             spreadRadius: 5, 
             offset: Offset(2, 3))]
       ),
-      
     );
   }
 }
