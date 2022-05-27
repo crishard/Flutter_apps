@@ -12,7 +12,7 @@ class GanhosCard extends StatelessWidget{
     return Padding(padding: const EdgeInsets.only(top: 20),
     child: 
     Container(
-      height: MediaQuery.of(context).size.height / 6,
+      height: 130,
       decoration: BoxDecoration(
         color: colorCard,
         borderRadius: BorderRadius.circular(20), 
