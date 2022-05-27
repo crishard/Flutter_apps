@@ -45,7 +45,7 @@ class _DesafioLayoutState extends State<DesafioLayout> {
 
       body: SafeArea(
            child: Padding(
-             padding: const EdgeInsets.only(top: 35, left: 35, right: 35),
+             padding: const EdgeInsets.only(top: 35, left: 25, right: 25),
 
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -75,14 +75,10 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                ),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Text(
                         "Parabéns! Esse mês você fez",
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.white,
-                        ),
-                      ),
+                        style: escolha ? TextsStyles.SimpleTextWhite : TextsStyles.SimpleTextBlack,),
                       Icon(
                         Icons.remove_red_eye_rounded, 
                         color: Colors.white, 

@@ -11,7 +11,6 @@ class TextsStyles {
 
   static const SimpleTextWhite = TextStyle(
     fontSize: 20,
-    fontWeight: FontWeight.bold,
     fontFamily: 'MarkerFelt',
     color: ComponentsColor.ColorBySimpleText,
     
@@ -28,7 +27,6 @@ class TextsStyles {
 
   static const SimpleTextBlack = TextStyle(
     fontSize: 20,
-    fontWeight: FontWeight.bold,
     fontFamily: 'MarkerFelt',
     color: ComponentsColor.ColorBySimpleTextBlack,
     
