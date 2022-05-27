@@ -80,6 +80,12 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                         "Parabéns! Esse mês você fez",
                         style: escolha ? TextsStyles.SimpleTextWhite : TextsStyles.SimpleTextBlack,),
                       
+                      IconButton(
+                        onPressed: botaoTema, 
+                        icon: escolha ? Icon(Icons.visibility): Icon(Icons.visibility_off),
+                        color: ComponentsColor.IconsColor,
+                        iconSize: 30,
+                      )
                     ],
                   ),
                   NotificacoesCard(),

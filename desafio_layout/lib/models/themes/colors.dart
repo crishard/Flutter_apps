@@ -11,4 +11,8 @@ class ComponentsColor {
   static const PrimeryColorBlack = Color.fromRGBO(38, 38, 38, 10);
   static const SecundaryColorBlack = Color.fromARGB(255, 255, 255, 255);
   static const ColorBySimpleTextBlack = Color.fromRGBO(212, 208, 223,10);
+
+
+  // icons color 
+  static const IconsColor = Color(0xFF4F426F);
 }
