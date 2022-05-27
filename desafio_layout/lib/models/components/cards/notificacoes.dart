@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 
 class NotificacoesCard extends StatelessWidget{
-  const NotificacoesCard({ Key? key }) : super(key: key);
+  const NotificacoesCard({ Key? key, required this.colorCard}) : super(key: key);
+
+  final Color colorCard;
 
   @override
   Widget build( BuildContext context){
@@ -15,7 +17,7 @@ class NotificacoesCard extends StatelessWidget{
     Container(
       height: MediaQuery.of(context).size.height / 6,
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 131, 99, 218),
+        color: colorCard,
         borderRadius: BorderRadius.circular(20), 
        boxShadow: [
           BoxShadow(

@@ -51,7 +51,7 @@ class _DesafioLayoutState extends State<DesafioLayout> {
               mainAxisAlignment: MainAxisAlignment.start,
              
              children: [
-               Padding(padding: const EdgeInsets.only(top: 20, bottom: 55),
+               Padding(padding: const EdgeInsets.only(top: 20, bottom: 40),
                 
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -88,8 +88,8 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                       )
                     ],
                   ),
-                  NotificacoesCard(),
-                  GanhosCard(),
+                  NotificacoesCard( colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack),
+                  GanhosCard(colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack,),
              ],
             ),   
           ),
