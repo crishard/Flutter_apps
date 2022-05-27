@@ -30,7 +30,7 @@ class DesafioLayout extends StatefulWidget {
 class _DesafioLayoutState extends State<DesafioLayout> {
 
   bool escolha = true;
-  void buttonEyes(){
+  void botaoTema(){
     setState(() {
 
       escolha = !escolha;
@@ -79,11 +79,7 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                       Text(
                         "Parabéns! Esse mês você fez",
                         style: escolha ? TextsStyles.SimpleTextWhite : TextsStyles.SimpleTextBlack,),
-                      Icon(
-                        Icons.remove_red_eye_rounded, 
-                        color: Colors.white, 
-                        size: 30,
-                      ),
+                      
                     ],
                   ),
                   NotificacoesCard(),
