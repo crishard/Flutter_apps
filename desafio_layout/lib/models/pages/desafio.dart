@@ -45,22 +45,28 @@ class _DesafioLayoutState extends State<DesafioLayout> {
       body: SafeArea(
            child: Padding(
              padding: const EdgeInsets.only(top: 35, left: 35, right: 35),
+
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+             
              children: [
                Padding(padding: const EdgeInsets.only(top: 20, bottom: 55),
+                
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
+                
                 children: [
                   const CircleAvatar(
-                     radius: 40,
+                     radius: 50,
                      backgroundImage: AssetImage('assets/images/perfil.jpeg'),
                    ),
+
                    Column(
                      crossAxisAlignment: CrossAxisAlignment.end,
                      children: const [
-                       Text('Olá', style: TextStyle(fontSize: 20, color: Colors.white),),
-                       Text('João!', style: TextStyle(fontSize: 50, color: Colors.white),),
+                       Text('Olá',),
+                       Text('Ziraldo!'),
                      ],
                    )
                  ],
@@ -89,13 +95,7 @@ class _DesafioLayoutState extends State<DesafioLayout> {
             ),   
           ),
          ),
-        //  MyStatefulWidget(),
-      // Row(
-      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //   crossAxisAlignment: CrossAxisAlignment.end,
-      //   children: [
-      //   Icon(Icons.menu, color: Colors.purple, size: 30,),
-      // ],
+        //
       bottomNavigationBar: BottomNavigationBar(
         // backgroundColor: Colors.black38,
         items: const[
