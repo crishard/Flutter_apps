@@ -10,9 +10,10 @@ class NotificacoesCard extends StatelessWidget{
     int _novosClientes = 20;
     int _novasCidades = 20;
 
-    return Container(
-      height: 100,
-      margin: const EdgeInsets.only(top: 15,),
+    return Padding(padding: const EdgeInsets.only(top: 20),
+    child: 
+    Container(
+      height: MediaQuery.of(context).size.height / 6,
       decoration: BoxDecoration(
         color: Color.fromARGB(255, 131, 99, 218),
         borderRadius: BorderRadius.circular(20), 
@@ -25,6 +26,7 @@ class NotificacoesCard extends StatelessWidget{
           ),
       ],
       ),
+    ),
     );
   }
 }
