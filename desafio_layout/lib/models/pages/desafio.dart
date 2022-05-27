@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:desafio_layout/models/components/cards/notificacoes.dart';
 import 'package:desafio_layout/models/components/cards/ganhos.dart';
 import 'package:desafio_layout/models/themes/colors.dart';
+import 'package:desafio_layout/models/themes/texts_style.dart';
 
 class MyApp extends StatelessWidget{
 
@@ -40,7 +41,7 @@ class _DesafioLayoutState extends State<DesafioLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: escolha ? ComponetsColor.PrimeryColorWhite : ComponetsColor.PrimeryColorBlack,
+      backgroundColor: escolha ? ComponentsColor.PrimeryColorWhite : ComponentsColor.PrimeryColorBlack,
 
       body: SafeArea(
            child: Padding(
@@ -64,9 +65,9 @@ class _DesafioLayoutState extends State<DesafioLayout> {
 
                    Column(
                      crossAxisAlignment: CrossAxisAlignment.end,
-                     children: const [
-                       Text('Olá',),
-                       Text('Ziraldo!'),
+                     children: [
+                       Text('Olá', style: escolha ? TextsStyles.SimpleTextWhite : TextsStyles.SimpleTextBlack,),
+                       Text('Ziraldo!', style: escolha ? TextsStyles.TextStyleNameWhite : TextsStyles.TextStyleNameBlack),
                      ],
                    )
                  ],
