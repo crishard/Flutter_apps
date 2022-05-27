@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:desafio_layout/models/components/cards/notificacoes.dart';
 import 'package:desafio_layout/models/components/cards/ganhos.dart';
+import 'package:desafio_layout/models/themes/colors.dart';
 
 class MyApp extends StatelessWidget{
 
@@ -26,14 +27,22 @@ class DesafioLayout extends StatefulWidget {
 }
 
 class _DesafioLayoutState extends State<DesafioLayout> {
+
+  bool escolha = true;
+  void buttonEyes(){
+    setState(() {
+
+      escolha = !escolha;
+    
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black38,
+      backgroundColor: escolha ? ComponetsColor.PrimeryColorWhite : ComponetsColor.PrimeryColorBlack,
 
-      body: Stack(
-       children: [
-         SingleChildScrollView(
+      body: SafeArea(
            child: Padding(
              padding: const EdgeInsets.only(top: 35, left: 35, right: 35),
             child: Column(
@@ -86,9 +95,7 @@ class _DesafioLayoutState extends State<DesafioLayout> {
       //   crossAxisAlignment: CrossAxisAlignment.end,
       //   children: [
       //   Icon(Icons.menu, color: Colors.purple, size: 30,),
-      // ],)
-       ],
-      ),
+      // ],
       bottomNavigationBar: BottomNavigationBar(
         // backgroundColor: Colors.black38,
         items: const[
