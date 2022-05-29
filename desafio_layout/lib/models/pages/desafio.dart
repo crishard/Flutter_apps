@@ -5,7 +5,6 @@ import 'package:desafio_layout/models/themes/colors.dart';
 import 'package:desafio_layout/models/themes/texts_style.dart';
 
 class MyApp extends StatelessWidget{
-
   const MyApp ({ Key? key }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -28,46 +27,36 @@ class DesafioLayout extends StatefulWidget {
 }
 
 class _DesafioLayoutState extends State<DesafioLayout> {
-
   bool escolha = true;
   void botaoTema(){
     setState(() {
-
       escolha = !escolha;
-    
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: escolha ? ComponentsColor.PrimeryColorWhite : ComponentsColor.PrimeryColorBlack,
-
-      body: SafeArea(
+        body: SafeArea(
            child: Padding(
              padding: const EdgeInsets.only(top: 35, left: 25, right: 25),
-
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-             
-             children: [
+              children: [
                Padding(padding: const EdgeInsets.only(top: 20, bottom: 40),
-                
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                
                 children: [
                   const CircleAvatar(
-                     radius: 50,
-                     backgroundImage: AssetImage('assets/images/perfil.jpeg'),
-                   ),
-
-                   Column(
-                     crossAxisAlignment: CrossAxisAlignment.end,
-                     children: [
-                       Text('Olá', style: escolha ? TextsStyles.SimpleTextWhite : TextsStyles.SimpleTextBlack,),
-                       Text('Ziraldo!', style: escolha ? TextsStyles.TextStyleNameWhite : TextsStyles.TextStyleNameBlack),
+                    radius: 50,
+                    backgroundImage: AssetImage('assets/images/perfil.jpeg'),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text('Olá', style: escolha ? TextsStyles.SimpleTextWhite : TextsStyles.SimpleTextBlack,),
+                        Text('Ziraldo!', style: escolha ? TextsStyles.TextStyleNameWhite : TextsStyles.TextStyleNameBlack),
                      ],
                    )
                  ],
@@ -81,15 +70,19 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                         style: escolha ? TextsStyles.SimpleTextWhite : TextsStyles.SimpleTextBlack,),
                       
                       IconButton(
-                        onPressed: botaoTema, 
+                        onPressed: (){}, 
                         icon: escolha ? Icon(Icons.visibility): Icon(Icons.visibility_off),
                         color: ComponentsColor.IconsColor,
                         iconSize: 30,
                       )
                     ],
                   ),
-                  NotificacoesCard( colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack),
-                  GanhosCard(colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack,),
+                NotificacoesCard(
+                  colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack
+                ),
+                GanhosCard(
+                  colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack,
+                ),
              ],
             ),   
           ),
@@ -98,7 +91,6 @@ class _DesafioLayoutState extends State<DesafioLayout> {
       bottomNavigationBar: BottomNavigationBar(
         // backgroundColor: Colors.black38,
         items: const[
-
           BottomNavigationBarItem(
             icon: Icon(Icons.home, color: Colors.purple,),
             label: 'Home',
@@ -120,7 +112,7 @@ class _DesafioLayoutState extends State<DesafioLayout> {
             backgroundColor: Colors.purple,
           ),
         ],
-    ),
+      ),
     );
   }
 }
