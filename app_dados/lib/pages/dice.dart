@@ -13,3 +13,9 @@ class MyApp extends StatelessWidget{
     );
   }
 }
+
+class DicePage extends StatefulWidget{
+  const DicePage({Key ? key}) : super(key: key);
+  @override
+  _DicePageState createState() => _DicePageState();
+}
