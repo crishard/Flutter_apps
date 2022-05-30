@@ -31,7 +31,7 @@ class _DicePageState extends State<DicePage>{
         title: const Text('Dice', style: TextStyle(fontSize: 30),),
         backgroundColor: Colors.red,
       ),
-      body: Dices(),
+      body: const Dices(),
     );
   }
 }
@@ -40,7 +40,15 @@ class Dices extends StatelessWidget{
   const Dices({Key ? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Row(
+      children: const [
+        Expanded(
+          child: Image(image: AssetImage('assets/images/dice1.png'),),
+        ),
+          Expanded(
+          child: Image(image: AssetImage('assets/images/dice2.png'),),
+        ),
+      ],
       
     );
   }
