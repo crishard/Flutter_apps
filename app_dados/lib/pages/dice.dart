@@ -25,12 +25,21 @@ class _DicePageState extends State<DicePage>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.red,
       appBar: AppBar(
         title: Text('Dice'),
       ),
-      body: Center(
-        child: Text('Hello World'),
-      ),
+      body: Dices(),
+    );
+  }
+}
+
+class Dices extends StatelessWidget{
+  const Dices({Key ? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      
     );
   }
 }

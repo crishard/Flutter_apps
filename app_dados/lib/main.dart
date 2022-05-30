@@ -1,4 +1,4 @@
 import 'package:flutter/material.dart';
 import 'package:app_dados/pages/dice.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
