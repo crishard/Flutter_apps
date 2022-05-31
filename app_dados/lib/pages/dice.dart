@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget{
@@ -44,7 +46,6 @@ class Dices extends StatefulWidget{
 
 
 class _DicesState extends State<Dices>{
-  
   int dicelock = 1;
 
   Widget build(BuildContext context) {
@@ -53,13 +54,21 @@ class _DicesState extends State<Dices>{
         children: [
         Expanded(
           child: TextButton(
-            onPressed: (){},
+            onPressed: (){
+              setState(() {
+                dicelock = Random().nextInt(6) + 1;
+              });
+            },
               child: Image.asset('assets/images/dice$dicelock.png'),
           )
         ),
           Expanded(
             child: TextButton(
-              onPressed: (){},
+              onPressed: (){
+                setState(() {
+                  dicelock = Random().nextInt(6) + 1;
+                });
+              },
               child: Image.asset('assets/images/dice$dicelock.png'),
             ),
             
