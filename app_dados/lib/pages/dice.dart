@@ -45,11 +45,13 @@ class Dices extends StatelessWidget{
         children: [
         Expanded(
           child: TextButton(
+            onPressed: (){},
               child: Image.asset('assets/images/dice1.png'),
           )
         ),
           Expanded(
             child: TextButton(
+              onPressed: (){},
               child: Image.asset('assets/images/dice2.png'),
             ),
             
