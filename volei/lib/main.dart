@@ -1,3 +1,3 @@
 import 'package:flutter/material.dart';
-
-void main() => runApp(MyApp());
+import 'package:volei/modules/pages/volei.dart';
+void main() => runApp(const MyApp());
