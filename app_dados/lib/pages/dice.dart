@@ -46,7 +46,8 @@ class Dices extends StatefulWidget{
 
 
 class _DicesState extends State<Dices>{
-  int dicelock = 1;
+  int dicelock1 = 1;
+  int dicelock2 = 1;
 
   Widget build(BuildContext context) {
     return Center(
@@ -56,20 +57,20 @@ class _DicesState extends State<Dices>{
           child: TextButton(
             onPressed: (){
               setState(() {
-                dicelock = Random().nextInt(6) + 1;
+                dicelock1 = Random().nextInt(6) + 1;
               });
             },
-              child: Image.asset('assets/images/dice$dicelock.png'),
+              child: Image.asset('assets/images/dice$dicelock1.png'),
           )
         ),
           Expanded(
             child: TextButton(
               onPressed: (){
                 setState(() {
-                  dicelock = Random().nextInt(6) + 1;
+                  dicelock2 = Random().nextInt(6) + 1;
                 });
               },
-              child: Image.asset('assets/images/dice$dicelock.png'),
+              child: Image.asset('assets/images/dice$dicelock2.png'),
             ),
             
         ),
