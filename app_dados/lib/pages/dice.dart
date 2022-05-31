@@ -44,14 +44,12 @@ class Dices extends StatelessWidget{
       child: Row(
         children: [
         Expanded(
-          child:Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset('assets/images/dice1.png'),
+          child: TextButton(
+              child: Image.asset('assets/images/dice1.png'),
           )
         ),
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
+            child: TextButton(
               child: Image.asset('assets/images/dice2.png'),
             ),
             
