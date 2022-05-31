@@ -31,17 +31,23 @@ class _DicePageState extends State<DicePage>{
         title: const Text('Dice', style: TextStyle(fontSize: 30),),
         backgroundColor: Colors.red,
       ),
-      body: const Dices(),
+      body: Dices(),
     );
   }
 }
 
-class Dices extends StatelessWidget{
+class Dices extends StatefulWidget{
   const Dices({Key ? key}) : super(key: key);
   @override
-  Widget build(BuildContext context) {
+  State<Dices> createState() => _DicesState();
+}
 
-    int dicelock = 1;
+
+class _DicesState extends State<Dices>{
+  
+  int dicelock = 1;
+
+  Widget build(BuildContext context) {
     return Center(
       child: Row(
         children: [
