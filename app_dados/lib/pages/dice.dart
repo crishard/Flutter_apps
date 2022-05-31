@@ -40,16 +40,18 @@ class Dices extends StatelessWidget{
   const Dices({Key ? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: const [
+    return Center(
+      child: Row(
+        children: [
         Expanded(
-          child: Image(image: AssetImage('assets/images/dice1.png'),),
+          child: Image.asset('assets/images/dice1.png'),
         ),
           Expanded(
-          child: Image(image: AssetImage('assets/images/dice2.png'),),
+          child: Image.asset('assets/images/dice2.png'),
         ),
       ],
       
+    ),
     );
   }
 }
