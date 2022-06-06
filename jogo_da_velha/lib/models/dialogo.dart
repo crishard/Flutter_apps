@@ -10,4 +10,12 @@ class Dialogo extends StatelessWidget{
   const Dialogo({required this.mensagem, required this.titulo, required this.onPressed});
 
 
+  @override
+  Widget build(BuildContext context){
+    return AlertDialog(
+      
+    );
+  }
+
+
 }
