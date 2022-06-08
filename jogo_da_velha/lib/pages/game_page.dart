@@ -10,7 +10,7 @@ class GamePage extends StatefulWidget{
 }
 
 class _GamePageState extends State<GamePage>{
-  final _game = Game();
+  final _gameControl = Game();
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -71,5 +71,10 @@ _onResetar(){
 
 }
 Widget _buildTile(context, index){
-  return GestureDetector();
+  return GestureDetector(
+    onTap: () => _onMarkTile(index),
+    child: Container(
+      child: Text(_gameControl.tiles[index].simbolo),
+    ),
+  );
 }
