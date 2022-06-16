@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:imc/models/widgets/quadrado.dart';
 import 'package:imc/models/widgets/botao_sexo.dart';
+import 'package:imc/models/widgets/botao_idade_peso.dart';
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
@@ -88,7 +89,20 @@ class _MyHomePageState extends State<MyHomePage> {
               
                 ),
             ),
-            Row(),
+            Row(
+              children: [
+                Expanded(
+                  child: Quadrado(
+                    conteudo: BotaoIdadePeso(texto: 'Idade', valor: 20,),
+                    ),
+                ),
+                Expanded(
+                  child: Quadrado(
+                    conteudo: BotaoIdadePeso(texto: 'Peso', valor: 60,),
+                    ),
+                ),
+              ],
+            ),
             ElevatedButton(onPressed: (){}, child: const Text('Calcular'),),
           ]
 
