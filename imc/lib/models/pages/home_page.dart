@@ -47,8 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
                   ),
             Quadrado(
-              conteudo: Expanded(
-                child: Column(
+              conteudo: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                   const Text('Altura',  style: TextStyle(
@@ -83,10 +82,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   thumbColor: Colors.red,
                 ),
                 ]
-                ,)
-
-
-              
                 ),
             ),
             Row(

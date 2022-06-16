@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imc/models/widgets/botao_cremento_decremento.dart';
 
 
 class BotaoIdadePeso extends StatefulWidget {
@@ -24,6 +25,13 @@ class _BotaoIdadePesoState extends State<BotaoIdadePeso> {
             fontSize: 18,
             color: Colors.white,
           ), ),
+
+          Row(
+            children: [
+          BotaoCD(icon: Icons.add),
+          BotaoCD(icon: Icons.remove),
+            ]
+          ),
         ],
       ),
     );
