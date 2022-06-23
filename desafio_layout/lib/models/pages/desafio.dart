@@ -27,12 +27,15 @@ class DesafioLayout extends StatefulWidget {
 }
 
 class _DesafioLayoutState extends State<DesafioLayout> {
+
+  Icon _iconeVisibilidade = Icon(Icons.visibility);
   bool escolha = true;
   void botaoTema(){
     setState(() {
       escolha = !escolha;
     });
   }
+  bool visibilidade = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,18 +73,36 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                         style: escolha ? TextsStyles.SimpleTextWhite : TextsStyles.SimpleTextBlack,),
                       
                       IconButton(
-                        onPressed: (){}, 
-                        icon: escolha ? Icon(Icons.visibility): Icon(Icons.visibility_off),
+                        icon: _iconeVisibilidade,
+                        onPressed: (){
+                          if(!visibilidade){
+                            setState(() {
+                              
+                              _iconeVisibilidade = const Icon(Icons.visibility);
+                            });
+                            visibilidade = true;
+                          } else{
+                            setState(() {
+                              
+                              _iconeVisibilidade = const Icon(Icons.visibility_off);
+                            }
+                            );
+                            visibilidade = false;
+                          }
+                        }, 
                         color: ComponentsColor.IconsColor,
                         iconSize: 30,
                       )
                     ],
                   ),
                 NotificacoesCard(
-                  colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack
+                  colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack,
+                  visibilidade: visibilidade,
                 ),
                 GanhosCard(
                   colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack,
+                  visibilidade: visibilidade,
+                  colorIconCardGanhos: escolha ? ComponentsColor.ColorBySimpleText: ComponentsColor.ColorBySimpleTextBlack,
                 ),
              ],
             ),   
