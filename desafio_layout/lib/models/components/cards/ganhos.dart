@@ -12,23 +12,7 @@ class GanhosCard extends StatelessWidget{
 
     num _ganhos = 1200;
 
-    return Padding(padding: const EdgeInsets.only(top: 20),
-    child: 
-    Container(
-      height: 130,
-      decoration: BoxDecoration(
-        color: colorCard,
-        borderRadius: BorderRadius.circular(20), 
-       boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.3),
-            spreadRadius: 2,
-            blurRadius: 3,
-            offset: const Offset(0, 3),
-          ),
-      ],
-      ),
-      child: Padding(
+    return Padding(
         padding: const EdgeInsets.only(top: 40, bottom: 40, left: 30, right: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -55,8 +39,6 @@ class GanhosCard extends StatelessWidget{
               ],
             )
           ],
-        ),
-      ),
     ),
     );
   }

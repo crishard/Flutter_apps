@@ -1,3 +1,4 @@
+import 'package:desafio_layout/models/components/cards/base_card.dart';
 import 'package:flutter/material.dart';
 import 'package:desafio_layout/models/components/cards/notificacoes.dart';
 import 'package:desafio_layout/models/components/cards/ganhos.dart';
@@ -95,15 +96,18 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                       )
                     ],
                   ),
-                NotificacoesCard(
+                  BaseCard(colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack, conteudo: NotificacoesCard(
                   colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack,
                   visibilidade: visibilidade,
-                ),
-                GanhosCard(
+                ),),
+                
+                BaseCard(colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack, conteudo: GanhosCard(
                   colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack,
                   visibilidade: visibilidade,
                   colorIconCardGanhos: escolha ? ComponentsColor.ColorBySimpleText: ComponentsColor.ColorBySimpleTextBlack,
-                ),
+                ),)
+                
+                
              ],
             ),   
           ),

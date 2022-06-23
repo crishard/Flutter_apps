@@ -14,23 +14,7 @@ class NotificacoesCard extends StatelessWidget{
     int _novosClientes = 20;
     int _novasCidades = 20;
 
-    return Padding(padding: const EdgeInsets.only(top: 20),
-    child: 
-    Container(
-      height: 130,
-      decoration: BoxDecoration(
-        color: colorCard,
-        borderRadius: BorderRadius.circular(20), 
-       boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.3),
-            spreadRadius: 2,
-            blurRadius: 3,
-            offset: const Offset(0, 3),
-          ),
-      ],
-      ),
-      child: Padding(padding:  const EdgeInsets.only(left: 20, right: 20),
+    return Padding(padding:  const EdgeInsets.only(left: 20, right: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -38,7 +22,6 @@ class NotificacoesCard extends StatelessWidget{
               InformacoesNotificacoes(esconde: visibilidade, valor: '20', iconNot: Icons.people_alt, text1: 'Novos', text2: 'Clientes'),
               InformacoesNotificacoes(esconde: visibilidade, valor: '20', iconNot: Icons.location_city, text1: 'Novas', text2: 'Cidades')
             ],
-      ),),
     ),
     );
   }
