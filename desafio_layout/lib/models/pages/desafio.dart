@@ -4,6 +4,7 @@ import 'package:desafio_layout/models/components/cards/notificacoes.dart';
 import 'package:desafio_layout/models/components/cards/ganhos.dart';
 import 'package:desafio_layout/models/themes/colors.dart';
 import 'package:desafio_layout/models/themes/texts_style.dart';
+import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 
 class MyApp extends StatelessWidget{
   const MyApp ({ Key? key }) : super(key: key);
@@ -30,6 +31,8 @@ class DesafioLayout extends StatefulWidget {
 class _DesafioLayoutState extends State<DesafioLayout> {
 
   Icon _iconeVisibilidade = Icon(Icons.visibility);
+  int currentIndex = 0;
+   
   bool escolha = true;
   void botaoTema(){
     setState(() {
@@ -100,7 +103,6 @@ class _DesafioLayoutState extends State<DesafioLayout> {
                   colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack,
                   visibilidade: visibilidade,
                 ),),
-                
                 BaseCard(colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack, conteudo: GanhosCard(
                   colorCard: escolha ? ComponentsColor.CardColorWhite : ComponentsColor.CardColorBlack,
                   visibilidade: visibilidade,
@@ -112,32 +114,71 @@ class _DesafioLayoutState extends State<DesafioLayout> {
             ),   
           ),
          ),
-        //
-      bottomNavigationBar: BottomNavigationBar(
-        // backgroundColor: Colors.black38,
-        items: const[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home, color: Colors.purple,),
-            label: 'Home',
-            backgroundColor: Colors.black38,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shop_two,),
-            label: 'Loja',
-            backgroundColor: Colors.purple,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.people_alt),
-            label: 'Pessoas',
-            backgroundColor: Colors.purple,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.escalator),
-            label: 'Informações',
-            backgroundColor: Colors.purple,
-          ),
-        ],
-      ),
+
+
+          // bottomNavigationBar: BubbleBottomBar(
+          //   opacity: .2,
+          //   currentIndex: currentIndex,
+          //   borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+          //   elevation: 8, //new, gives a cute ink effect
+          //   onTap: (index){
+          //     setState(() {
+          //       currentIndex = index;
+          //     });
+          //   },
+          //   inkColor: Colors.black12, //optional, uses theme color if not specified
+          //   items:[
+          //       BubbleBottomBarItem(
+          //         backgroundColor: Colors.red, 
+          //         icon: Icon(
+          //           Icons.home, 
+          //           color: Colors.black,
+          //           ), 
+          //           activeIcon: Icon(
+          //             Icons.home, 
+          //             color: Colors.red,
+          //             ), 
+          //             title: Text("Home")
+          //             ),
+
+          //       BubbleBottomBarItem(
+          //         backgroundColor: Colors.deepPurple, 
+          //         icon: Icon(
+          //           Icons.shop_2, 
+          //           color: Colors.black,
+          //           ), 
+          //           activeIcon: Icon(
+          //             Icons.shop_2, 
+          //             color: Colors.deepPurple,
+          //             ), 
+          //             title: Text("Logs")),
+
+          //       BubbleBottomBarItem(
+          //         backgroundColor: Colors.indigo, 
+          //         icon: Icon(
+          //           Icons.people_alt,
+          //           color: Colors.black,
+          //           ), 
+          //           activeIcon: Icon(
+          //             Icons.people_alt, 
+          //             color: Colors.indigo,
+          //             ), 
+          //             title: Text("Folders")),
+
+          //       BubbleBottomBarItem(
+          //         backgroundColor: Colors.green, 
+          //         icon: Icon(
+          //           Icons.escalator, 
+          //           color: Colors.black,
+          //           ), 
+          //           activeIcon: Icon(
+          //             Icons.escalator, 
+          //             color: Colors.green,
+          //             ), 
+          //             title: Text("Menu"))
+          //   ],
+          // ),
+          
     );
   }
 }

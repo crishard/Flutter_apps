@@ -28,7 +28,7 @@ class GanhosCard extends StatelessWidget{
                 visibilidade == true ? 
                 Container(
                   margin: const EdgeInsets.only(right: 55),
-                  child: Text("R\$ _.__") 
+                  child: const Text("R\$ _.__") 
 
                 ) : Container(
                   margin: const EdgeInsets.only(right: 55),
