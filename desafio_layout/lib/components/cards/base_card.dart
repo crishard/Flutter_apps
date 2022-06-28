@@ -11,7 +11,7 @@ class BaseCard extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Container(
-      height: 137,
+      height: 135,
       decoration: BoxDecoration(
         color: cardTema,
         borderRadius: BorderRadius.circular(32),

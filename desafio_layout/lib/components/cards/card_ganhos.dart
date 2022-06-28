@@ -17,7 +17,7 @@ class GanhosCard extends StatelessWidget {
     return BaseCard(
       cardTema: temaCard,
       conteudo: Padding(
-        padding: const EdgeInsets.only(top: 40, bottom: 40, left: 30, right: 30),
+        padding: const EdgeInsets.only(top: 38, bottom: 38, left: 30, right: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -39,12 +39,16 @@ class GanhosCard extends StatelessWidget {
                       fontSize: 32,
                       color: textColor,
                     )),
-                Text("em novos pedidos", style: TextStyle(
-                  fontFamily: 'MarkerFelt',
-                  fontSize: 22,
-                  color: textColor,
-                  fontWeight: FontWeight.w700
-                ))
+                    Container(
+                      margin: const EdgeInsets.only(top: 3),
+                      child:  Text("em novos pedidos", style: TextStyle(
+                          fontFamily: 'MarkerFelt',
+                          fontSize: 22,
+                          color: textColor,
+                          fontWeight: FontWeight.w700
+                ),
+                    )
+               )
               ],
             )
           ],

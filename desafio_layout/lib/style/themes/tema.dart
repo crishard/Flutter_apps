@@ -10,4 +10,9 @@ class ComponentsColors {
   static const cardColorWhite = Color.fromARGB(255, 214, 210, 226);
 
   // cores para o tema escuro
+  static const primaryColorBlack = Colors.white;
+  static const secondaryColorBlack = Color.fromARGB(255, 212, 208, 223);
+  static const backgroundColorBlack = Color.fromRGBO(38, 38, 38, 10);
+  static const numbersColorBlack = Color(0xFF4F426F);
+  static const cardColorBlack = Color.fromRGBO(33, 4, 87, 10);
 }

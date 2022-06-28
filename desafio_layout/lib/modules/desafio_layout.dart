@@ -13,6 +13,7 @@ class Desafio extends StatefulWidget {
 }
 
 class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
+
   Icon _myIcon = Icon(Icons.visibility);
   bool buttonClick = false;
   int _currentIndex = 0;
@@ -27,7 +28,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
 
   @override
   void initState() {
-    animationController = AnimationController(vsync: this,duration: Duration(microseconds: 250));
+    animationController = AnimationController(vsync: this,duration: const Duration(microseconds: 250));
     degOneTranslationAnimation = Tween(begin: 0.0, end: 1.0).animate(animationController);
     super.initState();
     animationController.addListener(() {
@@ -37,10 +38,13 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
     });
   }
 
+
+  bool temaClaro = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ComponentsColors.backgroundColorWhite,
+      backgroundColor: temaClaro ? ComponentsColors.backgroundColorWhite : ComponentsColors.backgroundColorBlack,
       body: Stack(
         children: [
           SingleChildScrollView(
@@ -61,13 +65,13 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           mainAxisAlignment: MainAxisAlignment.start,
-                          children: const [
+                          children:  [
                             Text(
                               "Olá",
                               style: TextStyle(
                                 fontFamily: 'MarkerFelt',
                                 fontSize: 20,
-                                color: ComponentsColors.secondaryColorWhite,
+                                color: temaClaro ? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
                                 fontWeight: FontWeight.w700
                               ),
                             ),
@@ -76,7 +80,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                               style: TextStyle(
                                 fontFamily: 'MarkerFelt',
                                 fontSize: 60,
-                                color: ComponentsColors.primaryColorWhite,
+                                color: temaClaro ? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
                                 fontWeight: FontWeight.bold
                               ),
                             )
@@ -88,19 +92,19 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                     const Text(
+                      Text(
                         "Parabéns! Esse mês você fez",
                         style: TextStyle(
                           fontFamily: 'MarkerFelt',
                           fontSize: 20,
-                          color: ComponentsColors.secondaryColorWhite,
+                          color: temaClaro? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
                           fontWeight: FontWeight.w700
                         ),
                       ),
                       IconButton(
                         icon: _myIcon,
                         iconSize: 35,
-                        color: ComponentsColors.numbersColorWhite,
+                        color: temaClaro? ComponentsColors.numbersColorWhite : ComponentsColors.numbersColorBlack,
                         onPressed: () {
                           setState(() => {
                             if (!buttonClick) {
@@ -116,33 +120,33 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                     ],
                   ),
                   NotificacoesCard(
-                    iconCard1: const Icon(
+                    iconCard1: Icon(
                       Icons.shop_2,
                       size: 45,
-                      color: ComponentsColors.primaryColorWhite,
+                      color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
                     ),
-                    iconCard2: const Icon(
+                    iconCard2: Icon(
                       Icons.people_alt,
                       size: 45,
-                      color: ComponentsColors.primaryColorWhite,
+                      color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
                     ),
-                    iconCard3: const Icon(
+                    iconCard3: Icon(
                       Icons.location_city,
                       size: 45,
-                      color: ComponentsColors.primaryColorWhite,
+                      color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
                     ),
-                    textColor: ComponentsColors.secondaryColorWhite,
-                    temaCard: ComponentsColors.cardColorWhite,
+                    textColor: temaClaro? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
+                    temaCard: temaClaro? ComponentsColors.cardColorWhite : ComponentsColors.cardColorBlack,
                     visibility: buttonClick,),
                   const SizedBox(height: 25,),
                   GanhosCard(
-                    iconCard: const Icon(
+                    iconCard: Icon(
                       Icons.shop_2,
                       size: 60,
-                      color: ComponentsColors.primaryColorWhite,
+                      color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
                     ),
-                    textColor: ComponentsColors.secondaryColorWhite,
-                    temaCard: ComponentsColors.cardColorWhite,
+                    textColor: temaClaro? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
+                    temaCard: temaClaro? ComponentsColors.cardColorWhite: ComponentsColors.cardColorBlack,
                     visibility: buttonClick,),
                   const SizedBox(height: 185),
                 ],
@@ -206,6 +210,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                   icon: const Icon(
                     Icons.add,
                     color: Colors.white,
+                    size: 45,
                   ),
                   onClick: () => {
                     if (animationController.isCompleted) {
@@ -220,7 +225,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
         ],
       ),
       bottomNavigationBar: BottomNavyBar(
-        backgroundColor: ComponentsColors.backgroundColorWhite,
+        backgroundColor: temaClaro ? ComponentsColors.backgroundColorWhite : ComponentsColors.backgroundColorBlack,
         selectedIndex: _currentIndex,
         showElevation: false,
         itemCornerRadius: 15,
@@ -258,7 +263,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
             ),
             ), 
             activeColor: ComponentsColors.primaryColorWhite, 
-            textAlign: TextAlign.center
+            textAlign: TextAlign.center,
           ),
 
           BottomNavyBarItem(
