@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../style/themes/tema.dart';
-import '../../style/texts_style.dart';
 
 class BaseCard extends StatelessWidget {
 

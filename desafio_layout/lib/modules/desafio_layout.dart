@@ -61,10 +61,8 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Container(
-                              child: 
-                            const Text(
+                          children: const [
+                            Text(
                               "Olá",
                               style: TextStyle(
                                 fontFamily: 'MarkerFelt',
@@ -73,8 +71,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                                 fontWeight: FontWeight.w700
                               ),
                             ),
-                            ),
-                            const Text(
+                            Text(
                               "Ziraldo!",
                               style: TextStyle(
                                 fontFamily: 'MarkerFelt',
@@ -107,10 +104,10 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                         onPressed: () {
                           setState(() => {
                             if (!buttonClick) {
-                              _myIcon = Icon(Icons.visibility_off),
+                              _myIcon = const Icon(Icons.visibility_off),
                               buttonClick = true
                             } else {
-                              _myIcon = Icon(Icons.visibility),
+                              _myIcon = const Icon(Icons.visibility),
                               buttonClick = false
                             }
                           });
@@ -163,7 +160,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                     color: ComponentsColors.primaryColorWhite,
                     width: 55,
                     height: 55,
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.shop,
                       color: Colors.white,
                     ),
@@ -178,7 +175,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                     color: ComponentsColors.primaryColorWhite,
                     width: 55,
                     height: 55,
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.people,
                       color: Colors.white,
                     ),
@@ -193,7 +190,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                     color: ComponentsColors.primaryColorWhite,
                     width: 55,
                     height: 55,
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.people,
                       color: Colors.white,
                     ),
@@ -206,7 +203,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                   color: ComponentsColors.primaryColorWhite,
                   width: 60,
                   height: 60,
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.add,
                     color: Colors.white,
                   ),
