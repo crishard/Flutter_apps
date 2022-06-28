@@ -1,8 +1,8 @@
 import 'package:desafio_layout/components/cards/base_card.dart';
 import 'package:flutter/material.dart';
 
-import '../../themes/colors.dart';
-import '../../themes/texts_style.dart';
+import '../../style/themes/claro.dart';
+import '../../style/texts_style.dart';
 
 class MoneyCard extends StatelessWidget {
   final bool visibility;

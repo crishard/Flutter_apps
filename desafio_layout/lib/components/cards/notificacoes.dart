@@ -1,6 +1,6 @@
 import 'package:desafio_layout/components/cards/base_card.dart';
-import 'package:desafio_layout/themes/colors.dart';
-import 'package:desafio_layout/themes/texts_style.dart';
+import 'package:desafio_layout/style/themes/claro.dart';
+import 'package:desafio_layout/style/texts_style.dart';
 import 'package:flutter/material.dart';
 
 class DataCard extends StatelessWidget {

@@ -2,9 +2,9 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:desafio_layout/components/cards/notificacoes.dart';
 import 'package:desafio_layout/components/expandable_fab/expandable_fab.dart';
 import 'package:desafio_layout/components/cards/card_ganhos.dart';
-import 'package:desafio_layout/themes/texts_style.dart';
+import 'package:desafio_layout/style/texts_style.dart';
 import 'package:flutter/material.dart';
-import 'package:desafio_layout/themes/colors.dart';
+import 'package:desafio_layout/style/themes/claro.dart';
 
 class Desafio extends StatefulWidget {
   const Desafio({ Key? key }) : super(key: key);

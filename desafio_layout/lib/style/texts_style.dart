@@ -1,4 +1,4 @@
-import 'package:desafio_layout/themes/colors.dart';
+import 'package:desafio_layout/style/themes/claro.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
