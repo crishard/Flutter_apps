@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 
-import '../../style/themes/claro.dart';
+import '../../style/themes/tema.dart';
 import '../../style/texts_style.dart';
 
 class BaseCard extends StatelessWidget {
 
- BaseCard({ Key? key, required this.conteudo}) : super(key: key);
+ BaseCard({ Key? key, required this.conteudo, required this.cardTema}) : super(key: key);
 
   Widget conteudo;
+  final Color cardTema;
   @override
   Widget build(BuildContext context) {
 
     return Container(
       height: 137,
       decoration: BoxDecoration(
-        color: ComponentsColors.cardColorWhite,
+        color: cardTema,
         borderRadius: BorderRadius.circular(32),
         boxShadow: [BoxShadow(
           color: Colors.grey.withOpacity(0.5),

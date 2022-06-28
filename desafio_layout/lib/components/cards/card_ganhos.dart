@@ -1,38 +1,50 @@
 import 'package:desafio_layout/components/cards/base_card.dart';
 import 'package:flutter/material.dart';
 
-import '../../style/themes/claro.dart';
-import '../../style/texts_style.dart';
+import '../../style/themes/tema.dart';
 
-class MoneyCard extends StatelessWidget {
+class GanhosCard extends StatelessWidget {
   final bool visibility;
 
-  const MoneyCard({ Key? key, required this.visibility }) : super(key: key);
-
+  const GanhosCard({ Key? key, required this.visibility, required this.iconCard,required this.temaCard, required this.textColor}) : super(key: key);
+  final Color temaCard;
+  final Color textColor;
+  final Icon iconCard;
   @override
   Widget build(BuildContext context) {
     double _money = 34000;
 
-    return BaseCard(conteudo: Padding(
+    return BaseCard(
+      cardTema: temaCard,
+      conteudo: Padding(
         padding: const EdgeInsets.only(top: 40, bottom: 40, left: 30, right: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Icon(
-              Icons.shop_2,
-              size: 60,
-              color: ComponentsColors.primaryColorWhite,
-            ),
+            iconCard,
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 visibility ? 
                 Container(
                   margin: const EdgeInsets.only(right: 55),
-                  child: Text("R\$ _.__", style: TextsStyle.price,) 
+                  child: Text("R\$ _.__", style: TextStyle(
+                          fontFamily: 'ConcertOne',
+                          fontSize: 32,
+                          color: textColor,
+                        )) 
 
-                ) : Text("R\$ ${_money}0", style: TextsStyle.price,),
-                Text("em novos pedidos", style: TextsStyle.moneyText)
+                ) : Text("R\$ ${_money}0", style: TextStyle(
+                      fontFamily: 'ConcertOne',
+                      fontSize: 32,
+                      color: textColor,
+                    )),
+                Text("em novos pedidos", style: TextStyle(
+                  fontFamily: 'MarkerFelt',
+                  fontSize: 22,
+                  color: textColor,
+                  fontWeight: FontWeight.w700
+                ))
               ],
             )
           ],

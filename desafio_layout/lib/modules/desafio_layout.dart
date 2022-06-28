@@ -2,9 +2,8 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:desafio_layout/components/cards/notificacoes.dart';
 import 'package:desafio_layout/components/expandable_fab/expandable_fab.dart';
 import 'package:desafio_layout/components/cards/card_ganhos.dart';
-import 'package:desafio_layout/style/texts_style.dart';
 import 'package:flutter/material.dart';
-import 'package:desafio_layout/style/themes/claro.dart';
+import 'package:desafio_layout/style/themes/tema.dart';
 
 class Desafio extends StatefulWidget {
   const Desafio({ Key? key }) : super(key: key);
@@ -65,14 +64,24 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                           children: [
                             Container(
                               child: 
-                            Text(
+                            const Text(
                               "Olá",
-                              style: TextsStyle.textView,
+                              style: TextStyle(
+                                fontFamily: 'MarkerFelt',
+                                fontSize: 20,
+                                color: ComponentsColors.secondaryColorWhite,
+                                fontWeight: FontWeight.w700
+                              ),
                             ),
                             ),
-                            Text(
+                            const Text(
                               "Ziraldo!",
-                              style: TextsStyle.texts,
+                              style: TextStyle(
+                                fontFamily: 'MarkerFelt',
+                                fontSize: 60,
+                                color: ComponentsColors.primaryColorWhite,
+                                fontWeight: FontWeight.bold
+                              ),
                             )
                           ],
                         ),
@@ -82,9 +91,14 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                     const Text(
                         "Parabéns! Esse mês você fez",
-                        style: TextsStyle.textView,
+                        style: TextStyle(
+                          fontFamily: 'MarkerFelt',
+                          fontSize: 20,
+                          color: ComponentsColors.secondaryColorWhite,
+                          fontWeight: FontWeight.w700
+                        ),
                       ),
                       IconButton(
                         icon: _myIcon,
@@ -104,10 +118,36 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                       )
                     ],
                   ),
-                  DataCard(visibility: buttonClick,),
-                  SizedBox(height: 25,),
-                  MoneyCard(visibility: buttonClick,),
-                  SizedBox(height: 185),
+                  NotificacoesCard(
+                    iconCard1: const Icon(
+                      Icons.shop_2,
+                      size: 45,
+                      color: ComponentsColors.primaryColorWhite,
+                    ),
+                    iconCard2: const Icon(
+                      Icons.people_alt,
+                      size: 45,
+                      color: ComponentsColors.primaryColorWhite,
+                    ),
+                    iconCard3: const Icon(
+                      Icons.location_city,
+                      size: 45,
+                      color: ComponentsColors.primaryColorWhite,
+                    ),
+                    textColor: ComponentsColors.secondaryColorWhite,
+                    temaCard: ComponentsColors.cardColorWhite,
+                    visibility: buttonClick,),
+                  const SizedBox(height: 25,),
+                  GanhosCard(
+                    iconCard: const Icon(
+                      Icons.shop_2,
+                      size: 60,
+                      color: ComponentsColors.primaryColorWhite,
+                    ),
+                    textColor: ComponentsColors.secondaryColorWhite,
+                    temaCard: ComponentsColors.cardColorWhite,
+                    visibility: buttonClick,),
+                  const SizedBox(height: 185),
                 ],
               ),
             ),
@@ -190,24 +230,70 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
         curve: Curves.easeIn,
         onItemSelected: (index) => setState(() => _currentIndex = index),
         items: [
-          BottomNavyBarItem(icon: 
-            Icon(Icons.home, size: 30,), 
-            title: Text("Home", style: TextsStyle.textsSimple,), 
+          BottomNavyBarItem(
+            icon: const Icon(
+              Icons.home, 
+              size: 30,
+              ), 
+            title: const Text("Home", 
+            style: TextStyle(
+              fontFamily: 'MarkerFelt',
+              fontSize: 18,
+              color: ComponentsColors.secondaryColorWhite,
+              fontWeight: FontWeight.w700
+            ),
+            ), 
             activeColor: ComponentsColors.primaryColorWhite, 
             textAlign: TextAlign.center,
           ),
-          BottomNavyBarItem(icon: Icon(Icons.shop_2, size: 30), 
-            title: Text("Loja", style: TextsStyle.textsSimple,), 
+
+          BottomNavyBarItem(
+            icon: const Icon(
+              Icons.shop_2, 
+              size: 30
+              ), 
+            title: const Text("Loja", 
+            style: TextStyle(
+              fontFamily: 'MarkerFelt',
+              fontSize: 18,
+              color: ComponentsColors.secondaryColorWhite,
+              fontWeight: FontWeight.w700
+            ),
+            ), 
             activeColor: ComponentsColors.primaryColorWhite, 
             textAlign: TextAlign.center
           ),
-          BottomNavyBarItem(icon: Icon(Icons.people_alt, size: 30), 
-            title: Text("Pessoas", style: TextsStyle.textsSimple,), 
+
+          BottomNavyBarItem(
+            icon: const Icon(
+              Icons.people_alt, 
+              size: 30
+              ), 
+            title: const Text("Pessoas", 
+            style: TextStyle(
+              fontFamily: 'MarkerFelt',
+              fontSize: 18,
+              color: ComponentsColors.secondaryColorWhite,
+              fontWeight: FontWeight.w700
+            ),
+            ), 
             activeColor: ComponentsColors.primaryColorWhite, 
             textAlign: TextAlign.center
           ),
-          BottomNavyBarItem(icon: Icon(Icons.escalator, size: 30), 
-            title: Text("Dados", style: TextsStyle.textsSimple,), 
+
+          BottomNavyBarItem(
+            icon: const Icon(
+              Icons.escalator, 
+              size: 30
+              ), 
+            title: const Text("Dados", 
+            style: TextStyle(
+              fontFamily: 'MarkerFelt',
+              fontSize: 18,
+              color: ComponentsColors.secondaryColorWhite,
+              fontWeight: FontWeight.w700
+            ),
+            ), 
             activeColor: ComponentsColors.primaryColorWhite, 
             textAlign: TextAlign.center
           ),
