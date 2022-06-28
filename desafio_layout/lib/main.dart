@@ -1,3 +1,4 @@
 import 'package:flutter/material.dart';
-import 'models/pages/desafio.dart';
+import 'app.dart';
+
 void main() => runApp(const MyApp());
