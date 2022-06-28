@@ -1,7 +1,7 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:desafio_layout/components/cards/notificacoes.dart';
 import 'package:desafio_layout/components/expandable_fab/expandable_fab.dart';
-import 'package:desafio_layout/components/cards/money_card.dart';
+import 'package:desafio_layout/components/cards/card_ganhos.dart';
 import 'package:desafio_layout/themes/texts_style.dart';
 import 'package:flutter/material.dart';
 import 'package:desafio_layout/themes/colors.dart';
@@ -41,7 +41,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ComponentsColors.backgroundColor,
+      backgroundColor: ComponentsColors.backgroundColorWhite,
       body: Stack(
         children: [
           SingleChildScrollView(
@@ -89,7 +89,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                       IconButton(
                         icon: _myIcon,
                         iconSize: 35,
-                        color: ComponentsColors.numbersColor,
+                        color: ComponentsColors.numbersColorWhite,
                         onPressed: () {
                           setState(() => {
                             if (!buttonClick) {
@@ -120,7 +120,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                 Transform.translate(
                   offset: Offset.fromDirection(getRadiansFromDegree(270), degOneTranslationAnimation.value * 100),
                   child: CircularButton(
-                    color: ComponentsColors.primaryColor,
+                    color: ComponentsColors.primaryColorWhite,
                     width: 55,
                     height: 55,
                     icon: Icon(
@@ -135,7 +135,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                 Transform.translate(
                   offset: Offset.fromDirection(getRadiansFromDegree(225), degOneTranslationAnimation.value * 100),
                   child: CircularButton(
-                    color: ComponentsColors.primaryColor,
+                    color: ComponentsColors.primaryColorWhite,
                     width: 55,
                     height: 55,
                     icon: Icon(
@@ -150,7 +150,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                 Transform.translate(
                   offset: Offset.fromDirection(getRadiansFromDegree(180), degOneTranslationAnimation.value * 100),
                   child: CircularButton(
-                    color: ComponentsColors.primaryColor,
+                    color: ComponentsColors.primaryColorWhite,
                     width: 55,
                     height: 55,
                     icon: Icon(
@@ -163,7 +163,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                   ),
                 ),
                 CircularButton(
-                  color: ComponentsColors.primaryColor,
+                  color: ComponentsColors.primaryColorWhite,
                   width: 60,
                   height: 60,
                   icon: Icon(
@@ -183,7 +183,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
         ],
       ),
       bottomNavigationBar: BottomNavyBar(
-        backgroundColor: ComponentsColors.backgroundColor,
+        backgroundColor: ComponentsColors.backgroundColorWhite,
         selectedIndex: _currentIndex,
         showElevation: false,
         itemCornerRadius: 15,
@@ -193,22 +193,22 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
           BottomNavyBarItem(icon: 
             Icon(Icons.home, size: 30,), 
             title: Text("Home", style: TextsStyle.textsSimple,), 
-            activeColor: ComponentsColors.primaryColor, 
+            activeColor: ComponentsColors.primaryColorWhite, 
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(icon: Icon(Icons.shop_2, size: 30), 
             title: Text("Loja", style: TextsStyle.textsSimple,), 
-            activeColor: ComponentsColors.primaryColor, 
+            activeColor: ComponentsColors.primaryColorWhite, 
             textAlign: TextAlign.center
           ),
           BottomNavyBarItem(icon: Icon(Icons.people_alt, size: 30), 
             title: Text("Pessoas", style: TextsStyle.textsSimple,), 
-            activeColor: ComponentsColors.primaryColor, 
+            activeColor: ComponentsColors.primaryColorWhite, 
             textAlign: TextAlign.center
           ),
           BottomNavyBarItem(icon: Icon(Icons.escalator, size: 30), 
             title: Text("Dados", style: TextsStyle.textsSimple,), 
-            activeColor: ComponentsColors.primaryColor, 
+            activeColor: ComponentsColors.primaryColorWhite, 
             textAlign: TextAlign.center
           ),
         ],

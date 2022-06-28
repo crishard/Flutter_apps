@@ -1,3 +1,4 @@
+import 'package:desafio_layout/components/cards/base_card.dart';
 import 'package:flutter/material.dart';
 
 import '../../themes/colors.dart';
@@ -12,19 +13,7 @@ class MoneyCard extends StatelessWidget {
   Widget build(BuildContext context) {
     double _money = 34000;
 
-    return Container(
-      height: 135,
-      decoration: BoxDecoration(
-        color: ComponentsColors.cardColor,
-        borderRadius: BorderRadius.circular(32),
-        boxShadow: [BoxShadow(
-          color: Colors.grey.withOpacity(0.5),
-          spreadRadius: 3,
-          blurRadius: 7,
-          offset: Offset(2, 3),
-        )]
-      ),
-      child: Padding(
+    return BaseCard(conteudo: Padding(
         padding: const EdgeInsets.only(top: 40, bottom: 40, left: 30, right: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -32,7 +21,7 @@ class MoneyCard extends StatelessWidget {
             const Icon(
               Icons.shop_2,
               size: 60,
-              color: ComponentsColors.primaryColor,
+              color: ComponentsColors.primaryColorWhite,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,

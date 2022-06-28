@@ -1,3 +1,4 @@
+import 'package:desafio_layout/components/cards/base_card.dart';
 import 'package:desafio_layout/themes/colors.dart';
 import 'package:desafio_layout/themes/texts_style.dart';
 import 'package:flutter/material.dart';
@@ -13,19 +14,7 @@ class DataCard extends StatelessWidget {
     int _clients = 20;
     int _cities = 20;
 
-    return Container(
-      // height: 137,
-      decoration: BoxDecoration(
-        color: ComponentsColors.cardColor,
-        borderRadius: BorderRadius.circular(32),
-        boxShadow: [BoxShadow(
-          color: Colors.grey.withOpacity(0.5),
-          spreadRadius: 3,
-          blurRadius: 7,
-          offset: Offset(2, 3),
-        )]
-      ),
-      child: Padding(
+    return BaseCard(conteudo: Padding(
         padding: const EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -38,7 +27,7 @@ class DataCard extends StatelessWidget {
                 Icon(
                   Icons.shop_2,
                   size: 45,
-                  color: ComponentsColors.primaryColor,
+                  color: ComponentsColors.primaryColorWhite,
                 ),
                 Column(
                   children: [
@@ -56,7 +45,7 @@ class DataCard extends StatelessWidget {
                 Icon(
                   Icons.people_alt,
                   size: 45,
-                  color: ComponentsColors.primaryColor,
+                  color: ComponentsColors.primaryColorWhite,
                 ),
                 Column(
                   children: [
@@ -74,7 +63,7 @@ class DataCard extends StatelessWidget {
                 Icon(
                   Icons.location_city,
                   size: 45,
-                  color: ComponentsColors.primaryColor,
+                  color: ComponentsColors.primaryColorWhite,
                 ),
                 Column(
                   children: [
