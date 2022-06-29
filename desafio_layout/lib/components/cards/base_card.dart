@@ -16,9 +16,9 @@ class BaseCard extends StatelessWidget {
         color: cardTema,
         borderRadius: BorderRadius.circular(32),
         boxShadow: [BoxShadow(
-          color: Colors.grey.withOpacity(0.5),
-          spreadRadius: 3,
-          blurRadius: 7,
+          color: Colors.black.withOpacity(0.2),
+          spreadRadius: 1,
+          blurRadius: 2,
           offset: Offset(2, 3),
         )]
       ),

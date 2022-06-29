@@ -39,7 +39,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
   }
 
 
-  bool temaClaro = false;
+  bool temaClaro = true;
 
   @override
   Widget build(BuildContext context) {
@@ -161,9 +161,9 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                 Transform.translate(
                   offset: Offset.fromDirection(getRadiansFromDegree(270), degOneTranslationAnimation.value * 100),
                   child: CircularButton(
-                    color: ComponentsColors.primaryColorWhite,
-                    width: 55,
-                    height: 55,
+                    color: ComponentsColors.numbersColorBlack,
+                    width: 52,
+                    height: 52,
                     icon: const Icon(
                       Icons.shop,
                       color: Colors.white,
@@ -176,9 +176,9 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                 Transform.translate(
                   offset: Offset.fromDirection(getRadiansFromDegree(225), degOneTranslationAnimation.value * 100),
                   child: CircularButton(
-                    color: ComponentsColors.primaryColorWhite,
-                    width: 55,
-                    height: 55,
+                    color: ComponentsColors.numbersColorWhite,
+                    width: 52,
+                    height: 52,
                     icon: const Icon(
                       Icons.people,
                       color: Colors.white,
@@ -191,9 +191,9 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                 Transform.translate(
                   offset: Offset.fromDirection(getRadiansFromDegree(180), degOneTranslationAnimation.value * 100),
                   child: CircularButton(
-                    color: ComponentsColors.primaryColorWhite,
-                    width: 55,
-                    height: 55,
+                    color: ComponentsColors.numbersColorWhite,
+                    width: 52,
+                    height: 52,
                     icon: const Icon(
                       Icons.people,
                       color: Colors.white,
@@ -233,36 +233,40 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
         onItemSelected: (index) => setState(() => _currentIndex = index),
         items: [
           BottomNavyBarItem(
-            icon: const Icon(
-              Icons.home, 
-              size: 30,
-              ), 
-            title: const Text("Home", 
-            style: TextStyle(
+            icon: Container(
+            decoration: BoxDecoration(
+            color: ComponentsColors.secondaryColorWhite,
+            borderRadius: BorderRadius.circular(10),
+        ),
+            child: Icon(Icons.home, size: 30),
+            ),
+            title: Text("Home", 
+             style: TextStyle(
               fontFamily: 'MarkerFelt',
               fontSize: 18,
-              color: ComponentsColors.secondaryColorWhite,
+              color: temaClaro ? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
               fontWeight: FontWeight.w700
-            ),
-            ), 
-            activeColor: ComponentsColors.primaryColorWhite, 
+            ),),
+
+            activeColor: temaClaro ?  ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack, 
             textAlign: TextAlign.center,
-          ),
+        ),
+
 
           BottomNavyBarItem(
             icon: const Icon(
               Icons.shop_2, 
               size: 30
               ), 
-            title: const Text("Loja", 
+            title:  Text("Loja", 
             style: TextStyle(
               fontFamily: 'MarkerFelt',
               fontSize: 18,
-              color: ComponentsColors.secondaryColorWhite,
+              color: temaClaro ?  ComponentsColors.secondaryColorWhite :  ComponentsColors.secondaryColorBlack,
               fontWeight: FontWeight.w700
             ),
             ), 
-            activeColor: ComponentsColors.primaryColorWhite, 
+            activeColor: temaClaro ?  ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack, 
             textAlign: TextAlign.center,
           ),
 
@@ -271,15 +275,15 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
               Icons.people_alt, 
               size: 30
               ), 
-            title: const Text("Pessoas", 
+            title:  Text("Pessoas", 
             style: TextStyle(
               fontFamily: 'MarkerFelt',
               fontSize: 18,
-              color: ComponentsColors.secondaryColorWhite,
+              color: temaClaro ?  ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
               fontWeight: FontWeight.w700
             ),
             ), 
-            activeColor: ComponentsColors.primaryColorWhite, 
+            activeColor:temaClaro ?  ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack, 
             textAlign: TextAlign.center
           ),
 
@@ -288,15 +292,15 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
               Icons.escalator, 
               size: 30
               ), 
-            title: const Text("Dados", 
+            title: Text("Dados", 
             style: TextStyle(
               fontFamily: 'MarkerFelt',
               fontSize: 18,
-              color: ComponentsColors.secondaryColorWhite,
+              color: temaClaro ?  ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
               fontWeight: FontWeight.w700
             ),
             ), 
-            activeColor: ComponentsColors.primaryColorWhite, 
+            activeColor: temaClaro ?  ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack, 
             textAlign: TextAlign.center
           ),
         ],
