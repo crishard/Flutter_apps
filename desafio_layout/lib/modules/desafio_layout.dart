@@ -233,22 +233,18 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
         onItemSelected: (index) => setState(() => _currentIndex = index),
         items: [
           BottomNavyBarItem(
-            icon: Container(
-            decoration: BoxDecoration(
-            color: ComponentsColors.secondaryColorWhite,
-            borderRadius: BorderRadius.circular(10),
-        ),
-            child: Icon(Icons.home, size: 30),
+            icon:Icon(Icons.home, 
+            size: 30, 
             ),
             title: Text("Home", 
              style: TextStyle(
               fontFamily: 'MarkerFelt',
               fontSize: 18,
-              color: temaClaro ? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
+              color:temaClaro ?  ComponentsColors.secondaryColorWhite :  ComponentsColors.secondaryColorBlack,
               fontWeight: FontWeight.w700
             ),),
 
-            activeColor: temaClaro ?  ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack, 
+            activeColor: temaClaro ?  ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
             textAlign: TextAlign.center,
         ),
 
@@ -289,7 +285,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
 
           BottomNavyBarItem(
             icon: const Icon(
-              Icons.escalator, 
+              Icons.show_chart, 
               size: 30
               ), 
             title: Text("Dados", 
