@@ -30,20 +30,20 @@ class GanhosCard extends StatelessWidget {
                   margin: const EdgeInsets.only(right: 55),
                   child: Text("R\$ _.__", style: TextStyle(
                           fontFamily: 'ConcertOne',
-                          fontSize: 32,
+                          fontSize: 30,
                           color: textColor,
                         )) 
 
                 ) : Text("R\$ ${_money}0", style: TextStyle(
                       fontFamily: 'ConcertOne',
-                      fontSize: 32,
+                      fontSize: 30,
                       color: textColor,
                     )),
                     Container(
                       margin: const EdgeInsets.only(top: 3),
                       child:  Text("em novos pedidos", style: TextStyle(
                           fontFamily: 'MarkerFelt',
-                          fontSize: 22,
+                          fontSize: 20,
                           color: textColor,
                           fontWeight: FontWeight.w700
                 ),

@@ -41,19 +41,52 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
 
   bool temaClaro = true;
 
+  void buttonEyes(){
+    setState(() {
+      temaClaro = !temaClaro;
+    });
+  }
+  Icon iconTema = Icon(Icons.mode_night);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: temaClaro ? ComponentsColors.backgroundColorWhite : ComponentsColors.backgroundColorBlack,
+        actions:[
+
+        IconButton(
+          icon: iconTema,
+          iconSize: 20,
+          color: temaClaro ? ComponentsColors.numbersColorWhite : ComponentsColors.backgroundColorWhite,
+          onPressed: (){
+            setState(() {
+              if(temaClaro){
+                iconTema = const Icon(Icons.mode_night_outlined);
+                temaClaro = false;
+              } else{
+                iconTema = const Icon(Icons.mode_night);
+                temaClaro = true;
+              }
+            });
+      
+          },
+        ),
+        ], 
+        
+        elevation: 0,
+      ),
       backgroundColor: temaClaro ? ComponentsColors.backgroundColorWhite : ComponentsColors.backgroundColorBlack,
       body: Stack(
         children: [
-          SingleChildScrollView(
+          SafeArea(
             child: Padding(
-              padding: const EdgeInsets.only(top: 40, right: 20, left: 20),
+              padding: const EdgeInsets.only(right: 20, left: 20),
               child: Column(
                 children: [
+                 
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 25, top: 20),
+                    padding: const EdgeInsets.only(bottom: 15, top: 30),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -122,17 +155,17 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                   NotificacoesCard(
                     iconCard1: Icon(
                       Icons.shop_2,
-                      size: 45,
+                      size: 40,
                       color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
                     ),
                     iconCard2: Icon(
                       Icons.people_alt,
-                      size: 45,
+                      size: 40,
                       color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
                     ),
                     iconCard3: Icon(
                       Icons.location_city,
-                      size: 45,
+                      size: 40,
                       color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
                     ),
                     textColor: temaClaro? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
@@ -142,13 +175,13 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                   GanhosCard(
                     iconCard: Icon(
                       Icons.shop_2,
-                      size: 60,
+                      size: 55,
                       color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
                     ),
                     textColor: temaClaro? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
                     temaCard: temaClaro? ComponentsColors.cardColorWhite: ComponentsColors.cardColorBlack,
                     visibility: buttonClick,),
-                  const SizedBox(height: 185),
+                  // const SizedBox(height: 185),
                 ],
               ),
             ),
@@ -159,14 +192,15 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
             child: Stack(
               children: [
                 Transform.translate(
-                  offset: Offset.fromDirection(getRadiansFromDegree(270), degOneTranslationAnimation.value * 100),
+                  offset: Offset.fromDirection(getRadiansFromDegree(280), degOneTranslationAnimation.value * 80),
                   child: CircularButton(
                     color: ComponentsColors.numbersColorBlack,
-                    width: 52,
-                    height: 52,
+                    width: 37,
+                    height: 37,
                     icon: const Icon(
                       Icons.shop,
                       color: Colors.white,
+                      size: 20,
                     ),
                     onClick: () => {
                       
@@ -174,32 +208,34 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset.fromDirection(getRadiansFromDegree(225), degOneTranslationAnimation.value * 100),
+                  offset: Offset.fromDirection(getRadiansFromDegree(220), degOneTranslationAnimation.value * 80),
                   child: CircularButton(
                     color: ComponentsColors.numbersColorWhite,
-                    width: 52,
-                    height: 52,
+                    width: 37,
+                    height: 37,
                     icon: const Icon(
                       Icons.people,
                       color: Colors.white,
+                      size: 20,
                     ),
                     onClick: () => {
-                      print("Pessoa 2")
+                      
                     },
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset.fromDirection(getRadiansFromDegree(180), degOneTranslationAnimation.value * 100),
+                  offset: Offset.fromDirection(getRadiansFromDegree(165), degOneTranslationAnimation.value * 80),
                   child: CircularButton(
                     color: ComponentsColors.numbersColorWhite,
-                    width: 52,
-                    height: 52,
+                    width: 37,
+                    height: 37,
                     icon: const Icon(
                       Icons.people,
                       color: Colors.white,
+                      size: 20,
                     ),
                     onClick: () => {
-                      print("Pessoa")
+                      
                     },
                   ),
                 ),
@@ -210,7 +246,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                   icon: const Icon(
                     Icons.add,
                     color: Colors.white,
-                    size: 45,
+                    size: 40,
                   ),
                   onClick: () => {
                     if (animationController.isCompleted) {

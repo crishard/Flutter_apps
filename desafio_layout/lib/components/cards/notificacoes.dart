@@ -18,7 +18,7 @@ class NotificacoesCard extends StatelessWidget {
     return BaseCard(
       cardTema: temaCard,
       conteudo: Padding(
-        padding: const EdgeInsets.only(top: 10, bottom: 10, left: 25, right: 25),
+        padding: const EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -40,13 +40,13 @@ class NotificacoesCard extends StatelessWidget {
                 iconCard1,
                 Column(
                   children: [
-                    Text("Novos", style: TextStyle(
+                    Text("novos", style: TextStyle(
                       fontFamily: 'MarkerFelt',
                       fontSize: 16,
                       color: textColor,
                       fontWeight: FontWeight.w700
                     )),
-                    Text("Pedidos", style: TextStyle(
+                    Text("pedidos", style: TextStyle(
                       fontFamily: 'MarkerFelt',
                       fontSize: 16,
                       color: textColor,
@@ -74,13 +74,13 @@ class NotificacoesCard extends StatelessWidget {
                 iconCard2,
                 Column(
                   children: [
-                    Text("Novos", style: TextStyle(
+                    Text("novos", style: TextStyle(
                       fontFamily: 'MarkerFelt',
                       fontSize: 16,
                       color: textColor,
                       fontWeight: FontWeight.w700
                     )),
-                    Text("Clientes", style: TextStyle(
+                    Text("clientes", style: TextStyle(
                       fontFamily: 'MarkerFelt',
                       fontSize: 16,
                       color: textColor,
@@ -108,13 +108,13 @@ class NotificacoesCard extends StatelessWidget {
                 iconCard3,
                 Column(
                   children: [
-                    Text("Novas", style: TextStyle(
+                    Text("novas", style: TextStyle(
                       fontFamily: 'MarkerFelt',
                       fontSize: 16,
                       color: textColor,
                       fontWeight: FontWeight.w700
                     )),
-                    Text("Cidades", style: TextStyle(
+                    Text("cidades", style: TextStyle(
                       fontFamily: 'MarkerFelt',
                       fontSize: 16,
                       color: textColor,
