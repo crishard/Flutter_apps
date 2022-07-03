@@ -1,13 +1,13 @@
 import 'package:desafio_layout/components/cards/base_card.dart';
+import 'package:desafio_layout/style/text/text_card_notificacoes.dart';
+import 'package:desafio_layout/style/themes/tema.dart';
 import 'package:flutter/material.dart';
 
 class NotificacoesCard extends StatelessWidget {
   final bool visibility;
 
-  const NotificacoesCard({ Key? key, required this.visibility, required this.iconCard1, required this.iconCard2, required this.iconCard3,required this.temaCard, required this.textColor }) : super(key: key);
-  final Color temaCard;
-  final Color textColor;
-  final Icon iconCard1, iconCard2, iconCard3;
+  const NotificacoesCard({ Key? key, required this.visibility,required this.colorComponents }) : super(key: key);
+  final bool colorComponents;
   @override
   Widget build(BuildContext context) {
     int _requests = 12;
@@ -15,7 +15,7 @@ class NotificacoesCard extends StatelessWidget {
     int _cities = 20;
 
     return BaseCard(
-      cardTema: temaCard,
+      cardTema: colorComponents? ComponentsColors.cardColorWhite : ComponentsColors.cardColorBlack,
       conteudo: Padding(
         padding: const EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
         child: Row(
@@ -25,32 +25,12 @@ class NotificacoesCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                visibility ? Text("*", style: TextStyle(
-                  fontFamily: 'MarkerFelt',
-                  fontSize: 16,
-                  color: textColor,
-                  fontWeight: FontWeight.w700
-                ),) : Text("${_requests}", style: TextStyle(
-                  fontFamily: 'MarkerFelt',
-                  fontSize: 16,
-                  color: textColor,
-                  fontWeight: FontWeight.w700
-                ),),
-                iconCard1,
+                visibility ? TextNotificacoes(name: "*", colorText: colorComponents) : TextNotificacoes(name: "${_requests}", colorText: colorComponents),
+                IconNotificacoes(iconBool: colorComponents, icon: Icons.shop_2),
                 Column(
                   children: [
-                    Text("novos", style: TextStyle(
-                      fontFamily: 'MarkerFelt',
-                      fontSize: 16,
-                      color: textColor,
-                      fontWeight: FontWeight.w700
-                    )),
-                    Text("pedidos", style: TextStyle(
-                      fontFamily: 'MarkerFelt',
-                      fontSize: 16,
-                      color: textColor,
-                      fontWeight: FontWeight.w700
-                    ))
+                    TextNotificacoes(name: "novos", colorText: colorComponents),
+                    TextNotificacoes(name: "pedidos", colorText: colorComponents),
                   ],
                 )
               ],
@@ -59,32 +39,12 @@ class NotificacoesCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                visibility ? Text("*", style: TextStyle(
-                      fontFamily: 'MarkerFelt',
-                      fontSize: 16,
-                      color: textColor,
-                      fontWeight: FontWeight.w700
-                    ),) : Text("${_clients}", style: TextStyle(
-                      fontFamily: 'MarkerFelt',
-                      fontSize: 16,
-                      color: textColor,
-                      fontWeight: FontWeight.w700
-                    )),
-                iconCard2,
+                visibility ? TextNotificacoes(name: "*", colorText: colorComponents) : TextNotificacoes(name: "${_clients}", colorText: colorComponents),
+                IconNotificacoes(iconBool: colorComponents, icon: Icons.people_alt),
                 Column(
                   children: [
-                    Text("novos", style: TextStyle(
-                      fontFamily: 'MarkerFelt',
-                      fontSize: 16,
-                      color: textColor,
-                      fontWeight: FontWeight.w700
-                    )),
-                    Text("clientes", style: TextStyle(
-                      fontFamily: 'MarkerFelt',
-                      fontSize: 16,
-                      color: textColor,
-                      fontWeight: FontWeight.w700
-                    ))
+                    TextNotificacoes(name: "novos", colorText: colorComponents),
+                    TextNotificacoes(name: "clientes", colorText: colorComponents),
                   ],
                 )
               ],
@@ -92,33 +52,12 @@ class NotificacoesCard extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                visibility ? Text("*", style: TextStyle(
-                      fontFamily: 'MarkerFelt',
-                      fontSize: 16,
-                      color: textColor,
-                      fontWeight: FontWeight.w700
-                    ),) : Text("${_cities}", style: TextStyle(
-                      fontFamily: 'MarkerFelt',
-                      fontSize: 16,
-                      color: textColor,
-                      fontWeight: FontWeight.w700
-                    ),),
-                iconCard3,
+              children: [ TextNotificacoes(name: "${_clients}", colorText: colorComponents),
+              IconNotificacoes(iconBool: colorComponents, icon: Icons.location_city),
                 Column(
                   children: [
-                    Text("novas", style: TextStyle(
-                      fontFamily: 'MarkerFelt',
-                      fontSize: 16,
-                      color: textColor,
-                      fontWeight: FontWeight.w700
-                    )),
-                    Text("cidades", style: TextStyle(
-                      fontFamily: 'MarkerFelt',
-                      fontSize: 16,
-                      color: textColor,
-                      fontWeight: FontWeight.w700
-                    ))
+                    TextNotificacoes(name: "novas", colorText: colorComponents),
+                    TextNotificacoes(name: "cidades", colorText: colorComponents),
                   ],
                 )
               ],
@@ -127,5 +66,20 @@ class NotificacoesCard extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class IconNotificacoes extends StatelessWidget{
+  const IconNotificacoes({ Key? key, required this.iconBool, required this.icon}) : super(key: key);
+  final bool iconBool;
+  final IconData icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Icon(
+      icon,
+      size: 40,
+      color: iconBool? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
+      );
   }
 }

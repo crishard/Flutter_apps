@@ -9,7 +9,6 @@ class BaseCard extends StatelessWidget {
   final Color cardTema;
   @override
   Widget build(BuildContext context) {
-
     return Container(
       height: 135,
       decoration: BoxDecoration(

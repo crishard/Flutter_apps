@@ -1,4 +1,5 @@
 import 'package:desafio_layout/components/cards/base_card.dart';
+import 'package:desafio_layout/style/text/text_padrao.dart';
 import 'package:flutter/material.dart';
 
 import '../../style/themes/tema.dart';
@@ -6,22 +7,24 @@ import '../../style/themes/tema.dart';
 class GanhosCard extends StatelessWidget {
   final bool visibility;
 
-  const GanhosCard({ Key? key, required this.visibility, required this.iconCard,required this.temaCard, required this.textColor}) : super(key: key);
-  final Color temaCard;
-  final Color textColor;
-  final Icon iconCard;
+  const GanhosCard({ Key? key, required this.visibility, required this.colorComponents}) : super(key: key);
+  final bool colorComponents;
   @override
   Widget build(BuildContext context) {
     double _money = 34000;
 
     return BaseCard(
-      cardTema: temaCard,
+      cardTema: colorComponents? ComponentsColors.cardColorWhite: ComponentsColors.cardColorBlack,
       conteudo: Padding(
         padding: const EdgeInsets.only(top: 38, bottom: 38, left: 30, right: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            iconCard,
+            Icon(
+              Icons.shop_2,
+              size: 55,
+              color: colorComponents? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
+              ),       
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
@@ -31,23 +34,17 @@ class GanhosCard extends StatelessWidget {
                   child: Text("R\$ _.__", style: TextStyle(
                           fontFamily: 'ConcertOne',
                           fontSize: 30,
-                          color: textColor,
+                          color: colorComponents? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
                         )) 
 
                 ) : Text("R\$ ${_money}0", style: TextStyle(
                       fontFamily: 'ConcertOne',
                       fontSize: 30,
-                      color: textColor,
+                      color: colorComponents? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
                     )),
                     Container(
                       margin: const EdgeInsets.only(top: 3),
-                      child:  Text("em novos pedidos", style: TextStyle(
-                          fontFamily: 'MarkerFelt',
-                          fontSize: 20,
-                          color: textColor,
-                          fontWeight: FontWeight.w700
-                ),
-                    )
+                      child:  TextPadrao(colorText: colorComponents, name: "em novos pedidos")
                )
               ],
             )

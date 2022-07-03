@@ -1,6 +1,4 @@
-// /////////////////////////
 import 'dart:math' as math;
-
 import 'package:desafio_layout/style/themes/tema.dart';
 import 'package:flutter/material.dart';
 
@@ -213,14 +211,16 @@ class ActionButton extends StatelessWidget {
           child: IconButton(
             onPressed: onPressed,
             icon: icon,
+            iconSize: 20,
+            color: Colors.white,
           ),
         ),
       Text( name,
-            style: TextStyle(
-              fontFamily: 'MarkerFelt',
-              fontSize: 13.0,
-              color: Color.fromRGBO(83, 39, 165, 10),
-            ))
+          style: const TextStyle(
+            fontFamily: 'MarkerFelt',
+            fontSize: 13.0,
+            color: Color.fromRGBO(83, 39, 165, 10),
+          ))
       ],
     );
   }

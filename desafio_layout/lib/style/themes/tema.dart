@@ -4,6 +4,12 @@ class ComponentsColors {
  ComponentsColors({ Key? key, required this.tema});
  bool tema;
 
+//  temaclaro(tema){
+//   if(tema == true){
+//     final Color primaryColor = Color.fromARGB(255, 33, 5, 96);
+//     final Color
+//   }
+//  }
 
   // cores para tema branco
   static const primaryColorWhite = Color.fromARGB(255, 33, 5, 96);
