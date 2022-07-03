@@ -7,7 +7,6 @@ import 'package:desafio_layout/style/themes/tema.dart';
 
 class Desafio extends StatefulWidget {
   const Desafio({ Key? key }) : super(key: key);
-
   @override
   State<Desafio> createState() => _DesafioState();
 }
@@ -18,27 +17,6 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
   bool buttonClick = false;
   int _currentIndex = 0;
 
-  late AnimationController animationController;
-  late Animation degOneTranslationAnimation;
-
-  double getRadiansFromDegree(double degree) {
-    double unitRadian = 57.295779513;
-    return degree / unitRadian;
-  }
-
-  @override
-  void initState() {
-    animationController = AnimationController(vsync: this,duration: const Duration(microseconds: 250));
-    degOneTranslationAnimation = Tween(begin: 0.0, end: 1.0).animate(animationController);
-    super.initState();
-    animationController.addListener(() {
-      setState(() {
-        
-      });
-    });
-  }
-
-
   bool temaClaro = true;
 
   void buttonEyes(){
@@ -46,15 +24,14 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
       temaClaro = !temaClaro;
     });
   }
-  Icon iconTema = Icon(Icons.mode_night);
+  Icon iconTema = const Icon(Icons.bedtime);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: temaClaro ? ComponentsColors.backgroundColorWhite : ComponentsColors.backgroundColorBlack,
-        actions:[
-
+        actions: [
         IconButton(
           icon: iconTema,
           iconSize: 20,
@@ -62,20 +39,17 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
           onPressed: (){
             setState(() {
               if(temaClaro){
-                iconTema = const Icon(Icons.mode_night_outlined);
+                iconTema = const Icon(Icons.bedtime_off_outlined);
                 temaClaro = false;
               } else{
-                iconTema = const Icon(Icons.mode_night);
+                iconTema = const Icon(Icons.bedtime);
                 temaClaro = true;
               }
             });
-      
           },
         ),
-        ], 
-        
-        elevation: 0,
-      ),
+        ],  
+        elevation: 0,),
       backgroundColor: temaClaro ? ComponentsColors.backgroundColorWhite : ComponentsColors.backgroundColorBlack,
       body: Stack(
         children: [
@@ -84,39 +58,31 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
               padding: const EdgeInsets.only(right: 20, left: 20),
               child: Column(
                 children: [
-                 
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 15, top: 30),
+                    padding: const EdgeInsets.only(bottom: 15, top: 15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         const CircleAvatar(
                           radius: 50,
-                          backgroundImage: AssetImage("assets/images/perfil.jpeg"),
-                        ),
+                          backgroundImage: AssetImage("assets/images/perfil.jpeg"),),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children:  [
-                            Text(
-                              "Olá",
+                            Text("Olá",
                               style: TextStyle(
                                 fontFamily: 'MarkerFelt',
                                 fontSize: 20,
                                 color: temaClaro ? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
-                                fontWeight: FontWeight.w700
-                              ),
-                            ),
-                            Text(
-                              "Ziraldo!",
+                                fontWeight: FontWeight.w700),),
+                            Text("Ziraldo!",
                               style: TextStyle(
                                 fontFamily: 'MarkerFelt',
                                 fontSize: 60,
                                 color: temaClaro ? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
-                                fontWeight: FontWeight.bold
-                              ),
-                            )
+                                fontWeight: FontWeight.bold),)
                           ],
                         ),
                       ],
@@ -131,9 +97,7 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                           fontFamily: 'MarkerFelt',
                           fontSize: 20,
                           color: temaClaro? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
-                          fontWeight: FontWeight.w700
-                        ),
-                      ),
+                          fontWeight: FontWeight.w700),),
                       IconButton(
                         icon: _myIcon,
                         iconSize: 35,
@@ -156,110 +120,56 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
                     iconCard1: Icon(
                       Icons.shop_2,
                       size: 40,
-                      color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
-                    ),
+                      color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,),
                     iconCard2: Icon(
                       Icons.people_alt,
                       size: 40,
-                      color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
-                    ),
+                      color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,),
                     iconCard3: Icon(
                       Icons.location_city,
                       size: 40,
-                      color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
-                    ),
+                      color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,),
                     textColor: temaClaro? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
                     temaCard: temaClaro? ComponentsColors.cardColorWhite : ComponentsColors.cardColorBlack,
                     visibility: buttonClick,),
-                  const SizedBox(height: 25,),
+                  const SizedBox(height: 15,),
                   GanhosCard(
                     iconCard: Icon(
                       Icons.shop_2,
                       size: 55,
-                      color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
-                    ),
+                      color: temaClaro? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,),
                     textColor: temaClaro? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
                     temaCard: temaClaro? ComponentsColors.cardColorWhite: ComponentsColors.cardColorBlack,
                     visibility: buttonClick,),
-                  // const SizedBox(height: 185),
                 ],
               ),
             ),
           ),
-          Positioned(
-            right: 10,
-            bottom: 10,
-            child: Stack(
-              children: [
-                Transform.translate(
-                  offset: Offset.fromDirection(getRadiansFromDegree(280), degOneTranslationAnimation.value * 80),
-                  child: CircularButton(
-                    color: ComponentsColors.numbersColorBlack,
-                    width: 37,
-                    height: 37,
-                    icon: const Icon(
-                      Icons.shop,
-                      color: Colors.white,
-                      size: 20,
-                    ),
-                    onClick: () => {
-                      
-                    },
-                  ),
-                ),
-                Transform.translate(
-                  offset: Offset.fromDirection(getRadiansFromDegree(220), degOneTranslationAnimation.value * 80),
-                  child: CircularButton(
-                    color: ComponentsColors.numbersColorWhite,
-                    width: 37,
-                    height: 37,
-                    icon: const Icon(
-                      Icons.people,
-                      color: Colors.white,
-                      size: 20,
-                    ),
-                    onClick: () => {
-                      
-                    },
-                  ),
-                ),
-                Transform.translate(
-                  offset: Offset.fromDirection(getRadiansFromDegree(165), degOneTranslationAnimation.value * 80),
-                  child: CircularButton(
-                    color: ComponentsColors.numbersColorWhite,
-                    width: 37,
-                    height: 37,
-                    icon: const Icon(
-                      Icons.people,
-                      color: Colors.white,
-                      size: 20,
-                    ),
-                    onClick: () => {
-                      
-                    },
-                  ),
-                ),
-                CircularButton(
-                  color: ComponentsColors.primaryColorWhite,
-                  width: 60,
-                  height: 60,
-                  icon: const Icon(
-                    Icons.add,
-                    color: Colors.white,
-                    size: 40,
-                  ),
-                  onClick: () => {
-                    if (animationController.isCompleted) {
-                      animationController.reverse()
-                    } else {
-                      animationController.forward()
-                    }
-                  },
-                ),
-              ],
-          ))
         ],
       ),
+        floatingActionButton: const ExpandableFab(
+              distance: 90,
+              children: [
+                ActionButton(
+                  name: 'representates', 
+                  icon: Icon(
+                    Icons.person_add_alt_sharp, 
+                    color: Colors.white,
+                    size: 20,)),
+                ActionButton(
+                  name: 'pedidos', 
+                  icon:  Icon(
+                    Icons.add_shopping_cart,  
+                    color: Colors.white,
+                    size: 20,)),
+                ActionButton(
+                  name: 'clientes', 
+                  icon:  Icon(
+                    Icons.person_add_alt_sharp,  
+                    color: Colors.white,
+                    size: 20,)),
+              ],
+        ),
       bottomNavigationBar: BottomNavyBar(
         backgroundColor: temaClaro ? ComponentsColors.backgroundColorWhite : ComponentsColors.backgroundColorBlack,
         selectedIndex: _currentIndex,
@@ -269,72 +179,55 @@ class _DesafioState extends State<Desafio> with SingleTickerProviderStateMixin {
         onItemSelected: (index) => setState(() => _currentIndex = index),
         items: [
           BottomNavyBarItem(
-            icon:Icon(Icons.home, 
-            size: 30, 
-            ),
+            icon:const Icon(Icons.home, 
+            size: 30,),
             title: Text("Home", 
              style: TextStyle(
               fontFamily: 'MarkerFelt',
               fontSize: 18,
               color:temaClaro ?  ComponentsColors.secondaryColorWhite :  ComponentsColors.secondaryColorBlack,
-              fontWeight: FontWeight.w700
-            ),),
-
+              fontWeight: FontWeight.w700),),
             activeColor: temaClaro ?  ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
             textAlign: TextAlign.center,
         ),
-
-
           BottomNavyBarItem(
             icon: const Icon(
               Icons.shop_2, 
-              size: 30
-              ), 
+              size: 30), 
             title:  Text("Loja", 
             style: TextStyle(
               fontFamily: 'MarkerFelt',
               fontSize: 18,
               color: temaClaro ?  ComponentsColors.secondaryColorWhite :  ComponentsColors.secondaryColorBlack,
-              fontWeight: FontWeight.w700
-            ),
-            ), 
+              fontWeight: FontWeight.w700),), 
             activeColor: temaClaro ?  ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack, 
             textAlign: TextAlign.center,
           ),
-
           BottomNavyBarItem(
             icon: const Icon(
               Icons.people_alt, 
-              size: 30
-              ), 
+              size: 30), 
             title:  Text("Pessoas", 
             style: TextStyle(
               fontFamily: 'MarkerFelt',
               fontSize: 18,
               color: temaClaro ?  ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
-              fontWeight: FontWeight.w700
-            ),
-            ), 
+              fontWeight: FontWeight.w700),), 
             activeColor:temaClaro ?  ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack, 
             textAlign: TextAlign.center
           ),
-
           BottomNavyBarItem(
             icon: const Icon(
               Icons.show_chart, 
-              size: 30
-              ), 
+              size: 30), 
             title: Text("Dados", 
             style: TextStyle(
               fontFamily: 'MarkerFelt',
               fontSize: 18,
               color: temaClaro ?  ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
-              fontWeight: FontWeight.w700
-            ),
-            ), 
+              fontWeight: FontWeight.w700),), 
             activeColor: temaClaro ?  ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack, 
-            textAlign: TextAlign.center
-          ),
+            textAlign: TextAlign.center),
         ],
       ),
     );

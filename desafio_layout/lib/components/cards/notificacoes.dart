@@ -1,5 +1,4 @@
 import 'package:desafio_layout/components/cards/base_card.dart';
-import 'package:desafio_layout/style/themes/tema.dart';
 import 'package:flutter/material.dart';
 
 class NotificacoesCard extends StatelessWidget {
