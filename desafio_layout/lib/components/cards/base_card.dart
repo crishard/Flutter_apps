@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 
 class BaseCard extends StatelessWidget {
 
- BaseCard({ Key? key, required this.conteudo, required this.cardTema}) : super(key: key);
+ BaseCard({ Key? key, required this.conteudo}) : super(key: key);
 
   Widget conteudo;
-  final Color cardTema;
   @override
   Widget build(BuildContext context) {
+    ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
     return Container(
       height: 135,
       decoration: BoxDecoration(
-        color: cardTema,
+        color: esquemaDeCores.surface,
         borderRadius: BorderRadius.circular(32),
         boxShadow: [BoxShadow(
           color: Colors.black.withOpacity(0.2),

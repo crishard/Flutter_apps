@@ -36,18 +36,6 @@ class _DesafioState extends State<Desafio>{
         }
       });
   }
-  // função para mudar tema
-  mudaTema(){
-    setState(() {
-      if(temaClaro){
-        iconTema = const Icon(Icons.bedtime_off_outlined);
-        temaClaro = false;
-      } else{
-        iconTema = const Icon(Icons.bedtime);
-        temaClaro = true;
-      }
-    });
-  }
   @override
   Widget build(BuildContext context) {
      ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
@@ -67,11 +55,6 @@ class _DesafioState extends State<Desafio>{
                 context.read<TemaCubit>().alteraTema();
               },
           )
-        // IconButton(
-        //   icon: iconTema,
-        //   iconSize: 20,
-        //   color: temaClaro ? ComponentsColors.numbersColorWhite : ComponentsColors.backgroundColorWhite,
-        //   onPressed: (){ mudaTema();},),
         ],  
         elevation: 0,),
       backgroundColor: esquemaDeCores.background,
@@ -84,7 +67,7 @@ class _DesafioState extends State<Desafio>{
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      TextPadrao(colorText: temaClaro, name: "Parabéns! Esse mês você fez",),
+                      TextPadrao(name: "Parabéns! Esse mês você fez",),
                       IconButton(
                         icon: _IconVisibilidade,
                         iconSize: 35,
@@ -116,25 +99,25 @@ class _DesafioState extends State<Desafio>{
         items: [
           BottomNavyBarItem(
             icon:const Icon(Icons.home, size: 32,),
-            title: TextPadrao(colorText: temaClaro, name: 'Home',),
+            title: TextPadrao(name: 'Home',),
             activeColor: esquemaDeCores.primary,
             textAlign: TextAlign.center,
         ),
           BottomNavyBarItem(
             icon: const Icon(Icons.shop_2, size: 32), 
-            title:  TextPadrao(colorText: temaClaro, name: "Loja",), 
+            title:  TextPadrao(name: "Loja",), 
             activeColor: esquemaDeCores.primary, 
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
             icon: const Icon(Icons.people_alt, size: 32), 
-            title:  TextPadrao(colorText: temaClaro, name: 'Pessoas',), 
+            title:  TextPadrao(name: 'Pessoas',), 
             activeColor: esquemaDeCores.primary, 
             textAlign: TextAlign.center
           ),
           BottomNavyBarItem(
             icon: const Icon(Icons.show_chart, size: 32), 
-            title: TextPadrao(colorText: temaClaro, name: "Dados",), 
+            title: TextPadrao(name: "Dados",), 
             activeColor: esquemaDeCores.primary, 
             textAlign: TextAlign.center),
         ],
