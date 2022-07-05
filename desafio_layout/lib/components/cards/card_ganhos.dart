@@ -11,7 +11,7 @@ class GanhosCard extends StatelessWidget {
   final bool colorComponents;
   @override
   Widget build(BuildContext context) {
-    double _money = 34000;
+    String _money = '34.000,00';
 
     return BaseCard(
       cardTema: colorComponents? ComponentsColors.cardColorWhite: ComponentsColors.cardColorBlack,
@@ -22,7 +22,7 @@ class GanhosCard extends StatelessWidget {
           children: [
             Icon(
               Icons.shop_2,
-              size: 55,
+              size: 60,
               color: colorComponents? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
               ),       
             Column(
@@ -30,14 +30,14 @@ class GanhosCard extends StatelessWidget {
               children: [
                 visibility ? 
                 Container(
-                  margin: const EdgeInsets.only(right: 55),
-                  child: Text("R\$ _.__", style: TextStyle(
+                  margin: const EdgeInsets.only(right: 58),
+                  child: Text("R\$ _,__", style: TextStyle(
                           fontFamily: 'ConcertOne',
                           fontSize: 30,
                           color: colorComponents? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
                         )) 
 
-                ) : Text("R\$ ${_money}0", style: TextStyle(
+                ) : Text("R\$ ${_money}", style: TextStyle(
                       fontFamily: 'ConcertOne',
                       fontSize: 30,
                       color: colorComponents? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,

@@ -4,8 +4,11 @@ import 'package:desafio_layout/components/expandable_fab/expandable_fab.dart';
 import 'package:desafio_layout/components/cards/card_ganhos.dart';
 import 'package:desafio_layout/components/topo/perfil.dart';
 import 'package:desafio_layout/style/text/text_padrao.dart';
+import 'package:desafio_layout/style/themes/mudatema.dart';
+import 'package:desafio_layout/style/themes/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:desafio_layout/style/themes/tema.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Desafio extends StatefulWidget {
   const Desafio({ Key? key }) : super(key: key);
@@ -45,25 +48,34 @@ class _DesafioState extends State<Desafio>{
       }
     });
   }
-
   @override
   Widget build(BuildContext context) {
+     ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: temaClaro ? ComponentsColors.backgroundColorWhite : ComponentsColors.backgroundColorBlack,
+        backgroundColor: esquemaDeCores.background,
         actions: [
-        IconButton(
-          icon: iconTema,
-          iconSize: 20,
-          color: temaClaro ? ComponentsColors.numbersColorWhite : ComponentsColors.backgroundColorWhite,
-          onPressed: (){
-            mudaTema();
-          },),
+          Switch(
+            activeColor: esquemaDeCores.secondaryVariant,
+            activeTrackColor: esquemaDeCores.secondaryVariant,
+              inactiveThumbColor: esquemaDeCores.primaryVariant,
+              inactiveTrackColor: esquemaDeCores.tertiary.withAlpha(100),
+            value:  context.read<TemaCubit>().state.brightness == Brightness.light
+                      ? false
+                      : true,
+              onChanged: (_) {
+                context.read<TemaCubit>().alteraTema();
+              },
+          )
+        // IconButton(
+        //   icon: iconTema,
+        //   iconSize: 20,
+        //   color: temaClaro ? ComponentsColors.numbersColorWhite : ComponentsColors.backgroundColorWhite,
+        //   onPressed: (){ mudaTema();},),
         ],  
         elevation: 0,),
-      backgroundColor: temaClaro ? ComponentsColors.backgroundColorWhite : ComponentsColors.backgroundColorBlack,
-      body:
-          SafeArea(
+      backgroundColor: esquemaDeCores.background,
+      body: SafeArea(
             child: Padding(
               padding: const EdgeInsets.only(right: 20, left: 20),
               child: Column(
@@ -76,30 +88,26 @@ class _DesafioState extends State<Desafio>{
                       IconButton(
                         icon: _IconVisibilidade,
                         iconSize: 35,
-                        color: temaClaro? ComponentsColors.numbersColorWhite : ComponentsColors.numbersColorBlack,
-                        onPressed: () {
-                          vizualizarValores();
-                        },
+                        color: esquemaDeCores.tertiary,
+                        onPressed: () { vizualizarValores();},
                       )
                     ],
                   ),
-                  NotificacoesCard(colorComponents: temaClaro,
-                    visibility: botaoVizualizar,),
+                  NotificacoesCard(colorComponents: temaClaro, visibility: botaoVizualizar,),
                   const SizedBox(height: 15,),
-                  GanhosCard(colorComponents: temaClaro,
-                    visibility: botaoVizualizar,),
+                  GanhosCard(colorComponents: temaClaro, visibility: botaoVizualizar,),
                 ],
               ),),),
-        floatingActionButton: const ExpandableFab(
-              distance: 93,
-              children: [
-                ActionButton(name: 'representantes', icon: Icon(Icons.person_add_alt_sharp, color: Colors.white,),),
-                ActionButton(name: 'pedidos', icon:  Icon(Icons.add_shopping_cart, color: Colors.white,),),
-                ActionButton(name: 'clientes', icon:  Icon(Icons.person_add_alt_sharp, color: Colors.white,),),
-              ],
-        ),
+      floatingActionButton: const ExpandableFab(
+            distance: 93,
+            children: [
+              ActionButton(name: 'representantes', icon: Icon(Icons.person_add_alt_sharp, color: Colors.white,),),
+              ActionButton(name: 'pedidos', icon:  Icon(Icons.add_shopping_cart, color: Colors.white,),),
+              ActionButton(name: 'clientes', icon:  Icon(Icons.person_add_alt_sharp, color: Colors.white,),),
+            ],
+      ),
       bottomNavigationBar: BottomNavyBar(
-        backgroundColor: temaClaro ? ComponentsColors.backgroundColorWhite : ComponentsColors.backgroundColorBlack,
+        backgroundColor: esquemaDeCores.background,
         selectedIndex: _currentIndex,
         showElevation: false,
         itemCornerRadius: 15,
@@ -109,25 +117,25 @@ class _DesafioState extends State<Desafio>{
           BottomNavyBarItem(
             icon:const Icon(Icons.home, size: 32,),
             title: TextPadrao(colorText: temaClaro, name: 'Home',),
-            activeColor: temaClaro ?  ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
+            activeColor: esquemaDeCores.primary,
             textAlign: TextAlign.center,
         ),
           BottomNavyBarItem(
             icon: const Icon(Icons.shop_2, size: 32), 
             title:  TextPadrao(colorText: temaClaro, name: "Loja",), 
-            activeColor: temaClaro ?  ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack, 
+            activeColor: esquemaDeCores.primary, 
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
             icon: const Icon(Icons.people_alt, size: 32), 
             title:  TextPadrao(colorText: temaClaro, name: 'Pessoas',), 
-            activeColor: temaClaro ?  ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack, 
+            activeColor: esquemaDeCores.primary, 
             textAlign: TextAlign.center
           ),
           BottomNavyBarItem(
             icon: const Icon(Icons.show_chart, size: 32), 
             title: TextPadrao(colorText: temaClaro, name: "Dados",), 
-            activeColor: temaClaro ?  ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack, 
+            activeColor: esquemaDeCores.primary, 
             textAlign: TextAlign.center),
         ],
       ),

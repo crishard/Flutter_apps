@@ -52,7 +52,8 @@ class NotificacoesCard extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
-              children: [ TextNotificacoes(name: "${_clients}", colorText: colorComponents),
+              children: [ 
+                visibility ? TextNotificacoes(name: "*", colorText: colorComponents) : TextNotificacoes(name: "${_cities}", colorText: colorComponents),
               IconNotificacoes(iconBool: colorComponents, icon: Icons.location_city),
                 Column(
                   children: [

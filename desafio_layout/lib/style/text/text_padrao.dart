@@ -12,8 +12,7 @@ class TextPadrao extends StatelessWidget{
         style: TextStyle(
         fontFamily: 'MarkerFelt',
         fontSize: 20,
-        color:colorText ?  ComponentsColors.secondaryColorWhite :  ComponentsColors.secondaryColorBlack,
+        color: colorText ?  ComponentsColors.secondaryColorWhite :  ComponentsColors.primaryColorBlack,
         fontWeight: FontWeight.w700),);
-        
   }
 }
