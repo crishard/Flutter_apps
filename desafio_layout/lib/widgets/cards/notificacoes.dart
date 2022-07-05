@@ -1,12 +1,11 @@
-import 'package:desafio_layout/components/cards/base_card.dart';
+import 'package:desafio_layout/widgets/cards/base_card.dart';
 import 'package:desafio_layout/style/text/text_card_notificacoes.dart';
 import 'package:flutter/material.dart';
 
 class NotificacoesCard extends StatelessWidget {
   final bool visibility;
 
-  const NotificacoesCard({ Key? key, required this.visibility,required this.colorComponents }) : super(key: key);
-  final bool colorComponents;
+  const NotificacoesCard({ Key? key, required this.visibility}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     ColorScheme esquemaDeCores = Theme.of(context).colorScheme;

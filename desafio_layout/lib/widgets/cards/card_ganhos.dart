@@ -1,14 +1,13 @@
-import 'package:desafio_layout/components/cards/base_card.dart';
+import 'package:desafio_layout/widgets/cards/base_card.dart';
 import 'package:desafio_layout/style/text/text_padrao.dart';
 import 'package:flutter/material.dart';
 
 import '../../style/themes/tema.dart';
 
 class GanhosCard extends StatelessWidget {
-  final bool visibility;
 
-  const GanhosCard({ Key? key, required this.visibility, required this.colorComponents}) : super(key: key);
-  final bool colorComponents;
+  const GanhosCard({ Key? key, required this.visibility}) : super(key: key);
+  final bool visibility;
   @override
   Widget build(BuildContext context) {
     ColorScheme esquemaDeCores = Theme.of(context).colorScheme;

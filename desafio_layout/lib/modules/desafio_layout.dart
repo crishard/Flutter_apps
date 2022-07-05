@@ -1,8 +1,8 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
-import 'package:desafio_layout/components/cards/notificacoes.dart';
-import 'package:desafio_layout/components/expandable_fab/expandable_fab.dart';
-import 'package:desafio_layout/components/cards/card_ganhos.dart';
-import 'package:desafio_layout/components/topo/perfil.dart';
+import 'package:desafio_layout/widgets/cards/notificacoes.dart';
+import 'package:desafio_layout/widgets/expandable_fab/expandable_fab.dart';
+import 'package:desafio_layout/widgets/cards/card_ganhos.dart';
+import 'package:desafio_layout/widgets/topo/perfil.dart';
 import 'package:desafio_layout/style/text/text_padrao.dart';
 import 'package:desafio_layout/style/themes/mudatema.dart';
 import 'package:desafio_layout/style/themes/theme.dart';
@@ -76,9 +76,9 @@ class _DesafioState extends State<Desafio>{
                       )
                     ],
                   ),
-                  NotificacoesCard(colorComponents: temaClaro, visibility: botaoVizualizar,),
+                  NotificacoesCard(visibility: botaoVizualizar,),
                   const SizedBox(height: 15,),
-                  GanhosCard(colorComponents: temaClaro, visibility: botaoVizualizar,),
+                  GanhosCard(visibility: botaoVizualizar,),
                 ],
               ),),),
       floatingActionButton: const ExpandableFab(

@@ -1,16 +1,19 @@
+import 'dart:io';
 import 'dart:math' as math;
+// import 'package:desafio_layout/style/themes/tema.dart';
 import 'package:desafio_layout/style/themes/tema.dart';
 import 'package:flutter/material.dart';
 
 // @immutable
 class ExpandableFab extends StatefulWidget {
+  
   const ExpandableFab({
     Key? key,
     this.initialOpen,
     required this.distance,
     required this.children,
   });
-
+  
   final bool? initialOpen;
   final double distance;
   final List<Widget> children;
@@ -80,13 +83,13 @@ class _ExpandableFabState extends State<ExpandableFab>
       child: Center(
         child: Material(
           shape: const CircleBorder(),
-          color: ComponentsColors.primaryColorWhite,
+          color: Color.fromARGB(255, 33, 5, 96),
           // clipBehavior: Clip.antiAlias,
           // elevation: 4.0,
           child: InkWell(
             onTap: _toggle,
-            child: Padding(
-              padding: const EdgeInsets.all(7),
+            child: const Padding(
+              padding: EdgeInsets.all(7),
               child: Icon(
                 Icons.add,
                 size: 40,
@@ -136,9 +139,9 @@ class _ExpandableFabState extends State<ExpandableFab>
           curve: const Interval(0.25, 1.0, curve: Curves.easeInOut),
           duration: const Duration(milliseconds: 100),
           child: FloatingActionButton(
-            backgroundColor: ComponentsColors.primaryColorWhite,
+            backgroundColor: Color.fromARGB(255, 33, 5, 96),
             onPressed: _toggle,
-            child: const Icon(Icons.add, size: 40,),
+            child: const Icon(Icons.add, size: 40, color: Colors.white),
           ),
         ),
       ),
