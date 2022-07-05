@@ -10,12 +10,12 @@ class NotificacoesCard extends StatelessWidget {
   Widget build(BuildContext context) {
     ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
     int _requests = 12;
-    int _clients = 20;
-    int _cities = 20;
+    int _clientes = 20;
+    int _cidades = 20;
 
     return BaseCard(
       conteudo: Padding(
-        padding: const EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
+        padding: const EdgeInsets.only(top: 16, bottom: 16, left: 30, right: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -23,8 +23,8 @@ class NotificacoesCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                visibility ? TextNotificacoes(name: "*") : TextNotificacoes(name: "${_requests}"),
-                IconNotificacoes(icon: Icons.shop_2),
+                visibility ? const TextNotificacoes(name: "*") : TextNotificacoes(name: "${_requests}"),
+                const IconNotificacoes(icon: Icons.shop_2),
                 Column(
                   children: const [
                     TextNotificacoes(name: "novos"),
@@ -37,8 +37,8 @@ class NotificacoesCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                visibility ? TextNotificacoes(name: "*") : TextNotificacoes(name: "${_clients}"),
-                IconNotificacoes(icon: Icons.people_alt),
+                visibility ? const TextNotificacoes(name: "*") : TextNotificacoes(name: "${_clientes}"),
+                const IconNotificacoes(icon: Icons.people_alt),
                 Column(
                   children: const [
                     TextNotificacoes(name: "novos"),
@@ -51,8 +51,8 @@ class NotificacoesCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [ 
-                visibility ? TextNotificacoes(name: "*") : TextNotificacoes(name: "${_cities}"),
-              IconNotificacoes(icon: Icons.location_city),
+                visibility ? const TextNotificacoes(name: "*") : TextNotificacoes(name: "${_cidades}"),
+              const IconNotificacoes(icon: Icons.location_city),
                 Column(
                   children: const [
                     TextNotificacoes(name: "novas"),

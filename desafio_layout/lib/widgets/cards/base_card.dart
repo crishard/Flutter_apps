@@ -10,7 +10,6 @@ class BaseCard extends StatelessWidget {
   Widget build(BuildContext context) {
     ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
     return Container(
-      height: 135,
       decoration: BoxDecoration(
         color: esquemaDeCores.surface,
         borderRadius: BorderRadius.circular(32),

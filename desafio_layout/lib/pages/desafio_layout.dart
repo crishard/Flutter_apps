@@ -4,7 +4,7 @@ import 'package:desafio_layout/widgets/expandable_fab/expandable_fab.dart';
 import 'package:desafio_layout/widgets/cards/card_ganhos.dart';
 import 'package:desafio_layout/widgets/topo/perfil.dart';
 import 'package:desafio_layout/style/text/text_padrao.dart';
-import 'package:desafio_layout/style/themes/mudatema.dart';
+import 'package:desafio_layout/controllers/mudatema.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,7 +20,6 @@ class _DesafioState extends State<Desafio>{
   bool botaoVizualizar = false;
   int _currentIndex = 0;
   Icon iconTema = const Icon(Icons.bedtime);
-  bool temaClaro = true;
 
   // função para esconder e mostrar valores
   vizualizarValores(){
@@ -44,8 +43,8 @@ class _DesafioState extends State<Desafio>{
           Switch(
             activeColor: esquemaDeCores.secondaryVariant,
             activeTrackColor: esquemaDeCores.secondaryVariant,
-              inactiveThumbColor: esquemaDeCores.primaryVariant,
-              inactiveTrackColor: esquemaDeCores.tertiary.withAlpha(100),
+            inactiveThumbColor: esquemaDeCores.primaryVariant,
+            inactiveTrackColor: esquemaDeCores.tertiary.withAlpha(100),
             value:  context.read<TemaCubit>().state.brightness == Brightness.light
                       ? false
                       : true,
@@ -53,19 +52,20 @@ class _DesafioState extends State<Desafio>{
                 context.read<TemaCubit>().alteraTema();
               },
           )
-        ],  
-        elevation: 0,),
+        ],),
       backgroundColor: esquemaDeCores.background,
       body: SafeArea(
             child: Padding(
               padding: const EdgeInsets.only(right: 20, left: 20),
               child: Column(
                 children: [
-                  Perfil(escolhaTema: temaClaro),
+                  Perfil(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      TextPadrao(name: "Parabéns! Esse mês você fez",),
+                      Padding(padding: const EdgeInsets.only(left: 20),
+                      child: TextPadrao(name: "Parabéns! Esse mês você fez",),),
+                      
                       IconButton(
                         icon: _IconVisibilidade,
                         iconSize: 35,

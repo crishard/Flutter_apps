@@ -1,7 +1,7 @@
-import 'package:desafio_layout/style/themes/mudatema.dart';
+import 'package:desafio_layout/controllers/mudatema.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'modules/desafio_layout.dart';
+import 'pages/desafio_layout.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({ Key? key }) : super(key: key);
