@@ -7,6 +7,7 @@ class Perfil extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+    ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
     return Padding(
         padding: const EdgeInsets.only(bottom: 15, top: 15),
         child: Row(
@@ -24,13 +25,13 @@ class Perfil extends StatelessWidget{
                   style: TextStyle(
                     fontFamily: 'MarkerFelt',
                     fontSize: 20,
-                    color: escolhaTema ? ComponentsColors.secondaryColorWhite : ComponentsColors.secondaryColorBlack,
+                    color: esquemaDeCores.secondary,
                     fontWeight: FontWeight.w700),),
                 Text("Ziraldo!",
                   style: TextStyle(
                     fontFamily: 'MarkerFelt',
                     fontSize: 60,
-                    color: escolhaTema ? ComponentsColors.primaryColorWhite : ComponentsColors.primaryColorBlack,
+                    color: esquemaDeCores.primary,
                     fontWeight: FontWeight.bold),)
               ],
             ),

@@ -38,7 +38,7 @@ class _DesafioState extends State<Desafio>{
   }
   @override
   Widget build(BuildContext context) {
-     ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
+    ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: esquemaDeCores.background,
