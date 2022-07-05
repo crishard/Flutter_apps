@@ -2,7 +2,6 @@ import 'package:desafio_layout/widgets/cards/base_card.dart';
 import 'package:desafio_layout/style/text/text_padrao.dart';
 import 'package:flutter/material.dart';
 
-import '../../style/themes/tema.dart';
 
 class GanhosCard extends StatelessWidget {
 

@@ -5,9 +5,7 @@ import 'package:desafio_layout/widgets/cards/card_ganhos.dart';
 import 'package:desafio_layout/widgets/topo/perfil.dart';
 import 'package:desafio_layout/style/text/text_padrao.dart';
 import 'package:desafio_layout/style/themes/mudatema.dart';
-import 'package:desafio_layout/style/themes/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:desafio_layout/style/themes/tema.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Desafio extends StatefulWidget {

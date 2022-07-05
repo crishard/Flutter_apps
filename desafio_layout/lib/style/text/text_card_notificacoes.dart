@@ -1,4 +1,3 @@
-import 'package:desafio_layout/style/themes/tema.dart';
 import 'package:flutter/material.dart';
 
 class TextNotificacoes extends StatelessWidget{

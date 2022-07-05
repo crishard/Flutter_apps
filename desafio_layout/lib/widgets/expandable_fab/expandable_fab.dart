@@ -1,7 +1,4 @@
-import 'dart:io';
 import 'dart:math' as math;
-// import 'package:desafio_layout/style/themes/tema.dart';
-import 'package:desafio_layout/style/themes/tema.dart';
 import 'package:flutter/material.dart';
 
 // @immutable
@@ -84,8 +81,6 @@ class _ExpandableFabState extends State<ExpandableFab>
         child: Material(
           shape: const CircleBorder(),
           color: Color.fromARGB(255, 33, 5, 96),
-          // clipBehavior: Clip.antiAlias,
-          // elevation: 4.0,
           child: InkWell(
             onTap: _toggle,
             child: const Padding(
