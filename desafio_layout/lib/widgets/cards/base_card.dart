@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class BaseCard extends StatelessWidget {
 
  BaseCard({ Key? key, required this.conteudo}) : super(key: key);
@@ -10,6 +9,7 @@ class BaseCard extends StatelessWidget {
   Widget build(BuildContext context) {
     ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
     return Container(
+      // height: 160,
       decoration: BoxDecoration(
         color: esquemaDeCores.surface,
         borderRadius: BorderRadius.circular(32),

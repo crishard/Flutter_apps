@@ -1,5 +1,5 @@
 import 'package:desafio_layout/widgets/cards/base_card.dart';
-import 'package:desafio_layout/style/text/text_padrao.dart';
+import 'package:desafio_layout/models/text/text_padrao.dart';
 import 'package:flutter/material.dart';
 
 
@@ -14,13 +14,13 @@ class GanhosCard extends StatelessWidget {
 
     return BaseCard(
       conteudo: Padding(
-        padding: const EdgeInsets.only(top: 38, bottom: 38, left: 30, right: 30),
+        padding: const EdgeInsets.only(top: 40, bottom: 40, left: 30, right: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Icon(
               Icons.shop_2,
-              size: 60,
+              size: 65,
               color: esquemaDeCores.primary,
               ),       
             Column(
@@ -28,16 +28,16 @@ class GanhosCard extends StatelessWidget {
               children: [
                 visibility ? 
                 Container(
-                  margin: const EdgeInsets.only(right: 58),
+                  margin: const EdgeInsets.only(right: 62),
                   child: Text("R\$ _,__", style: TextStyle(
                           fontFamily: 'ConcertOne',
-                          fontSize: 30,
+                          fontSize: 40,
                           color: esquemaDeCores.secondary,
                         )) 
 
                 ) : Text("R\$ ${_money}", style: TextStyle(
                       fontFamily: 'ConcertOne',
-                      fontSize: 30,
+                      fontSize: 40,
                       color: esquemaDeCores.secondary,
                     )),
                     Container(

@@ -3,7 +3,7 @@ import 'package:desafio_layout/widgets/cards/notificacoes.dart';
 import 'package:desafio_layout/widgets/expandable_fab/expandable_fab.dart';
 import 'package:desafio_layout/widgets/cards/card_ganhos.dart';
 import 'package:desafio_layout/widgets/topo/perfil.dart';
-import 'package:desafio_layout/style/text/text_padrao.dart';
+import 'package:desafio_layout/models/text/text_padrao.dart';
 import 'package:desafio_layout/controllers/mudatema.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -63,9 +63,8 @@ class _DesafioState extends State<Desafio>{
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Padding(padding: const EdgeInsets.only(left: 20),
+                      const Padding(padding: EdgeInsets.only(left: 20),
                       child: TextPadrao(name: "Parabéns! Esse mês você fez",),),
-                      
                       IconButton(
                         icon: _IconVisibilidade,
                         iconSize: 35,
@@ -75,12 +74,12 @@ class _DesafioState extends State<Desafio>{
                     ],
                   ),
                   NotificacoesCard(visibility: botaoVizualizar,),
-                  const SizedBox(height: 15,),
+                  const SizedBox(height: 20,),
                   GanhosCard(visibility: botaoVizualizar,),
                 ],
               ),),),
       floatingActionButton: const ExpandableFab(
-            distance: 93,
+            distance: 105,
             children: [
               ActionButton(name: 'representantes', icon: Icon(Icons.person_add_alt_sharp, color: Colors.white,),),
               ActionButton(name: 'pedidos', icon:  Icon(Icons.add_shopping_cart, color: Colors.white,),),

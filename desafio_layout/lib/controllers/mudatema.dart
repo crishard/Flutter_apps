@@ -1,5 +1,4 @@
-
-import 'package:desafio_layout/style/themes/theme.dart';
+import 'package:desafio_layout/models/themes/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

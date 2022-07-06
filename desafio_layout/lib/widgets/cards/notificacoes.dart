@@ -1,5 +1,5 @@
 import 'package:desafio_layout/widgets/cards/base_card.dart';
-import 'package:desafio_layout/style/text/text_card_notificacoes.dart';
+import 'package:desafio_layout/models/text/text_card_notificacoes.dart';
 import 'package:flutter/material.dart';
 
 class NotificacoesCard extends StatelessWidget {
@@ -15,7 +15,7 @@ class NotificacoesCard extends StatelessWidget {
 
     return BaseCard(
       conteudo: Padding(
-        padding: const EdgeInsets.only(top: 16, bottom: 16, left: 30, right: 30),
+        padding: const EdgeInsets.only(top: 25, bottom: 25, left: 30, right: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -77,7 +77,7 @@ class IconNotificacoes extends StatelessWidget{
     ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
     return Icon(
       icon,
-      size: 40,
+      size: 45,
       color: esquemaDeCores.primary,
       );
   }

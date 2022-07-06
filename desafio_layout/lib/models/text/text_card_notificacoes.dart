@@ -9,7 +9,7 @@ class TextNotificacoes extends StatelessWidget{
     ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
     return Text(name, style: TextStyle(
         fontFamily: 'MarkerFelt',
-        fontSize: 16,
+        fontSize: 20,
         color: esquemaDeCores.secondary,
         fontWeight: FontWeight.w700
       )); 
